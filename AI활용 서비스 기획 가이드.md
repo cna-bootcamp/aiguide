@@ -119,21 +119,33 @@
   ```
 
 - Knowledge에 협업에 필요한 자료를 업로드 
-- AI 모델은 Opus를 사용. Sonnet과도 비교.
+  - 'sample_'시작하는 모든 파일 업로드  
+  - 'Lean Canvas 작성 가이드.txt' 업로드  
+- AI 모델은 기본인 'Sonnet' 사용  
 
 ### ChatGPT
-바로가기: [ChatGPT](https://chatgpt.com/)
-- MJ Prompt Generator, 시장조사 전문가, 커리어해커 프로프트 생성기 추가 
-  
+바로가기: [ChatGPT](https://chatgpt.com/)  
+'시장조사 전문가', '커리어해커 프롬프트 생성기' 추가 
+- 좌측 메뉴에서 'GPT탐색' 클릭  
+- 검색창에서 GPT명 검색 
+- 상단 타이틀에서 '사이드바에 유지' 클릭  
+  ![alt text](image.png)
+
 ### Perplexsity 설정
-바로가기: [Perplexity](https://www.perplexity.ai)
-- 개인 프로파일에 Facts와 Opinion으로 나누어 답변하도록 설정
+바로가기: [Perplexity](https://www.perplexity.ai)  
+- 설정 클릭  
+![alt text](image-1.png)
+- 개인 프로파일에 Facts와 Opinion으로 나누어 답변하도록 설정  
+  ![alt text](image-2.png)  
+
   ```
   [결과출력 요구사항]
   - {Facts}와 {Opinions}로 나누어 응답
   - 'Facts'는 근거가 되는 URL링크를 함께 제공 
   ```
 - AI 모델은 Sonar Huge나 Claude sonnet 사용 
+  ![alt text](image-3.png)
+
 
 ### Gamma 
 바로가기: [Gamma](https://gamma.app)
@@ -152,8 +164,11 @@
   ```
 
 > Tip: 마크다운 표를 문서에 붙이는 방법  
-> Google docs 임시문서를 만들고 Edit > Paste from markdown 수행  
-> 표 형태로 나온 결과를 복사하여 원하는 문서에 활용  
+> - Google docs 임시문서를 생성  
+> - 도구 > Preference 클릭 후 'Enable Markdown' 체크  
+>   ![alt text](image-4.png)
+> - Edit > Paste from markdown 수행  
+> - 표 형태로 나온 결과를 복사하여 원하는 문서에 활용  
 
 ---
 
