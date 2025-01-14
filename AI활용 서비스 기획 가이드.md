@@ -165,8 +165,8 @@
   7) 최종으로 선정된 최적안을 제시함
   ```
 
-- Knowledge에 협업에 필요한 자료를 업로드 
-  좌측에 있는 파일 목록 중 'sample.zip'파일을 다운로드 하면 압축 해제  
+- Knowledge에 협업에 필요한 자료를 업로드   
+  좌측에 있는 파일 목록 중 'sample.zip'파일을 다운로드 하면 압축 해제   
 
   ![alt text](./images/image-5.png)
   - Lean Canvas 작성 가이드.txt
