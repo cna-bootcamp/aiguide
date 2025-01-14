@@ -159,8 +159,10 @@
   ```
 
 - Knowledge에 협업에 필요한 자료를 업로드 
+  ![alt text](./images/image-5.png)
   - Lean Canvas 작성 가이드.txt
   - sample_관찰 결과보고서.pdf
+  - sample_체험 결과보고서.pdf
   - sample_고객경험인터뷰결과지.docx
   - sample_문제가설도출.pdf
   - sample_문제검증인터뷰 결과.docx
@@ -173,14 +175,14 @@
 - 좌측 메뉴에서 'GPT탐색' 클릭  
 - 검색창에서 GPT명 검색 
 - 상단 타이틀에서 '사이드바에 유지' 클릭  
-  ![alt text](image.png)
+  ![alt text](./images/image.png)
 
 ### Perplexsity 설정
 바로가기: [Perplexity](https://www.perplexity.ai)  
 - 설정 클릭  
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 - 개인 프로파일에 Facts와 Opinion으로 나누어 답변하도록 설정  
-  ![alt text](image-2.png)  
+  ![alt text](./images/image-2.png)  
 
   ```
   [결과출력 요구사항]
@@ -188,7 +190,7 @@
   - 'Facts'는 근거가 되는 URL링크를 함께 제공 
   ```
 - AI 모델은 Sonar Huge나 Claude sonnet 사용 
-  ![alt text](image-3.png)
+  ![alt text](./images/image-3.png)
 
 
 ### Gamma 
@@ -210,7 +212,7 @@
 > Tip: 마크다운 표를 문서에 붙이는 방법  
 > - Google docs 임시문서를 생성  
 > - 도구 > Preference 클릭 후 'Enable Markdown' 체크  
->   ![alt text](image-4.png)
+>   ![alt text](./images/image-4.png)
 > - Edit > Paste from markdown 수행  
 > - 표 형태로 나온 결과를 복사하여 원하는 문서에 활용  
 
@@ -221,6 +223,9 @@
 - 시장조사
   - '커리어해커 프로프트 생성기'에게 시장조사 프롬프트 요청.  
   - 프롬프트: '{전통적 시장 도메인}에 대한 시장조사 프롬프트를 만들어 주세요'
+    ```
+    구독관리 서비스에 대한 시장조사 프롬프트를 만들어 주세요.
+    ```
   - ChatGPTs의 '시장조사 전문가', Perplexisity를 이용하여 시장 조사  
 
 - 관찰: 관찰결과 레포트 작성을 요청 
@@ -229,7 +234,7 @@
   - 프롬프트 예시
     ```
     [요청사항]
-    - {집에서 조리된 음식을 먹고 싶은 음식소비자} {10}명을 관찰한 결과를 개별적으로 작성해 주세요.
+    - {가성비 좋은 구독서비스를 이용하고 싶은 구독서비스 이용자} {10}명을 관찰한 결과를 개별적으로 작성해 주세요.
     - 프로필에 연령대를 포함  
     [참고자료]
     - sample_관찰결과 레포트  
