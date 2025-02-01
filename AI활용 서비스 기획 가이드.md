@@ -200,6 +200,9 @@
 - AI 모델은 Sonar Huge나 Claude sonnet 사용 
   ![alt text](./images/image-3.png)
 
+- Search에 Deepseek R1 모델 사용  
+  RAG(Retrieval-Augented Generation: 검색 기반 증강 생성 방식) 모델로 **DeepSeek R1**을 사용합니다.   
+  ![](images/2025-02-01-15-58-02.png)
 
 ### Gamma 
 바로가기: [Gamma](https://gamma.app)
