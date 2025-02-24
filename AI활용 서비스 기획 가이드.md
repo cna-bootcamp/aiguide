@@ -243,7 +243,7 @@
   [결과형식] 
   코드블록 
   ```
-- ChatGPTs의 Perplexisity를 이용하여 시장 조사  
+- Perplexisity를 이용하여 시장 조사  
   - 위에서 구한 프롬프트를 이용  
   - 결과를 복사하여 Knowledge에 '시장조사' 제목으로 업로드: 'Add text content' 메뉴 이용    
     ![alt text](./images/image6.png)
