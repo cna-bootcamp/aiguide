@@ -170,6 +170,7 @@
 
 - Knowledge에 협업에 필요한 자료를 업로드   
   좌측에 있는 파일 목록 중 'sample.zip'파일을 다운로드 하고 압축 해제 후 업로드      
+  압축 해제 후 excel 파일은 제외하고 올려 주세요.    
 
   ![alt text](./images/image-5.png)
   - Lean Canvas 작성 가이드
