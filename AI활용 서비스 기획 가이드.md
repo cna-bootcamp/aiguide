@@ -643,7 +643,7 @@ svg 파일
 ```
 
 **2.Knowledge에 추가**   
-GitHub에서 'Userstory.pdf'와 '구독서비스목록.txt'파일을 업로드합니다.   
+좌측에서 'Userstory.pdf'와 '구독서비스목록.txt'파일을 다운로드한 후 업로드합니다.   
 
 **3.화면설계 및 검토**    
 ```
