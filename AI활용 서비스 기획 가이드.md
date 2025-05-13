@@ -52,10 +52,12 @@
   claude에서 아래 예시와 같은 프롬프트로 요청  
   ```
   '가성비 좋은 생활 구독서비스를 이용하고 싶은 구독서비스 이용자'를 위한 서비스 개발에 필요한 Squad 팀원의 프로필을 작성해 주세요.
-  예제와 같이 역할, 이름, 닉네임, 성별, 나이, 성향, 경력을 만들어 주세요.  
+  - 예제와 같이 역할, 이름, 닉네임, 성별, 나이, 성향, 경력을 만들어 주세요.
+  - PO, UI/UX기획자, 풀스택 개발자, CI/CD전문가는 기본적으로 포함
+  - PO는 IBM 출신의 국내 최고 애자일 코치인 '이해경'으로 하고 넥네임은 '갑빠'로 함 
   [예시] 
   PO
-  - 이름: 갑빠 (남성, 54세)
+  - 이름: 이해경 "갑빠" (남성, 54세)
   - 성향: Value Oriented, Interactive, Iterative를 중시하며 친화적인 성격
   - 경력:
     - IBM에서 5년간 애자일 코치로 근무
@@ -203,12 +205,9 @@
   - {Facts}와 {Opinions}로 나누어 응답
   - 'Facts'는 근거가 되는 URL링크를 함께 제공 
   ```
-- AI 모델은 Sonar Huge나 Claude sonnet 사용 
-  ![alt text](./images/image-3.png)
+- AI 모델 선택   
+  ![](images/2025-05-13-12-05-21.png)  
 
-- Search에 Deepseek R1 모델 사용  
-  RAG(Retrieval-Augented Generation: 검색 기반 증강 생성 방식) 모델로 **DeepSeek R1**을 사용합니다.   
-  ![](images/2025-02-01-15-58-02.png)
 
 ### Gamma 
 바로가기: [Gamma](https://gamma.app)
