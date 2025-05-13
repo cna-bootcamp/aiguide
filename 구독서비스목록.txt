@@ -1,0 +1,29 @@
+1) OTT
+- "넷플릭스", "전세계 최대 OTT 서비스", "OTT", 17000, 4, "/images/netflix.png
+- "티빙", "국내 실시간 방송과 예능/드라마 VOD", "OTT", 13900, 4, "/images/tving.png
+- "디즈니플러스", "디즈니, 픽사, 마블, 스타워즈 콘텐츠", "OTT", 9900, 4, "/images/disney.png
+
+2) 음악
+- "멜론", "국내 최대 음원 스트리밍", "MUSIC", 10900, 1, "/images/melon.png"
+- "스포티파이", "전세계 음악 스트리밍", "MUSIC", 10900, 6, "/images/spotify.png
+- "유튜브 뮤직", "유튜브 음원 스트리밍", "MUSIC", 8900, 5, "/images/youtube-music.png
+                
+3) 음식
+- "쿠팡이츠", "식품 정기배송", "FOOD", 4900, 1, "/images/coupang-eats.png"
+- "마켓컬리", "신선식품 새벽배송", "FOOD", 4900, 1, "/images/kurly.png"
+- "배민", "배달음식 구독", "FOOD", 5900, 1, "/images/baemin.png"
+
+4) 생활
+- "당근", "중고거래 프리미엄", "LIFE", 3900, 1, "/images/karrot.png"
+- "쿠팡 로켓와우", "무료배송 구독", "LIFE", 4900, 4, "/images/coupang.png"
+- "밀리의 서재", "전자책 구독", "LIFE", 9900, 1, "/images/millie.png"
+
+5) 뷰티
+- "올리브영", "뷰티 정기구독", "BEAUTY", 15900, 1, "/images/oliveyoung.png"
+- "시코르", "화장품 구독박스", "BEAUTY", 29900, 1, "/images/chicor.png"
+- "롭스", "뷰티 멤버십", "BEAUTY", 19900, 1, "/images/lohbs.png"
+
+6) 교육
+- "클래스101", "취미/교양 클래스", "EDU", 19900, 1, "/images/class101,
+- "탈잉", "원데이 클래스", "EDU", 29900, 1, "/images/taling.png"
+- "캐치", "IT 실무 교육", "EDU", 99000, 1, "/images/catch.png"
