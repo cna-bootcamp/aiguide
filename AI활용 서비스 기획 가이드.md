@@ -29,6 +29,7 @@
   - [서비스 기획서 작성](#서비스-기획서-작성)
     - [기획서 스크립트 작성](#기획서-스크립트-작성)
     - [서비스 기획서 작성](#서비스-기획서-작성-1)
+  - [다음 단계](#다음-단계)
 
 ---
 
@@ -652,3 +653,8 @@ gamma.app을 이용하여 빠르게 작성
 ![picture 0](images/2ecb298e501d42682ff2f14bc885cc743fe97b7ae464c7109bad545bc897b7e1.png)  
 
 | [Top](#목차) |
+
+---
+
+## 다음 단계
+[기획 구체화](https://github.com/cna-bootcamp/clauding-guide/tree/main?tab=readme-ov-file#%EA%B8%B0%ED%9A%8D-%EA%B5%AC%EC%B2%B4%ED%99%94) 단계를 진행합니다.   
