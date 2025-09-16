@@ -80,6 +80,16 @@ mkdir -p ~/home/workspace/{프로젝트}
 mkdir -p ~/home/workspace/lifesub
 ```
 
+**5.가이드 다운로드**    
+기획 가이드를 PC에 다운로드 합니다.         
+Mac 사용자는 기본 터미널에서 수행하고 Window 사용자는 Git Bash 터미널에서 수행합니다.  
+```
+cd ~/home/workspace
+git clone https://github.com/cna-bootcamp/aiguide.git
+```
+Mac은 Finder, window는 탐색기 프로그램에서 사용자홈/home/workspace/aiguide 디렉토리를 확인합니다.    
+
+
 ## 생성형AI 설정
 
 ### Claude 설정 
@@ -159,16 +169,9 @@ mkdir -p ~/home/workspace/lifesub
   ```
 
 - '파일'에 협업에 필요한 자료를 업로드   
-  ![](images/2025-09-17-00-17-05.png)    
-  좌측에 있는 파일 목록 중 'sample.zip'파일을 다운로드 하고 압축 해제 후 업로드      
-  압축 해제 후 excel 파일은 제외하고 올려 주세요.    
-  - Lean Canvas 작성 가이드
-  - sample_관찰 결과보고서.pdf
-  - sample_체험 결과보고서.pdf
-  - sample_고객경험인터뷰결과지.docx
-  - sample_문제가설도출.pdf
-  - sample_문제검증인터뷰 결과.docx
-  - sample_문제검증인터뷰 결과취합.pdf
+  Mac은 Finder, window는 탐색기 프로그램에서 사용자홈/home/workspace/aiguide/samples 디렉토리 밑으로 이동합니다.    
+  samples 디렉토리 하위의 모든 파일을 drag하여 Claude Project의 파일에 Drop합니다.   
+
 - AI 모델은 기본인 'Sonnet' 사용  
   ![](images/2025-09-17-00-17-48.png)  
 
@@ -247,6 +250,8 @@ mkdir -p ~/home/workspace/lifesub
 ### 시장조사
 - '커리어해커 프로프트 생성기'에게 시장조사 프롬프트 요청.  
 - 프롬프트:
+  
+  예시) 
   ```  
   [요청사항] 
   - {생활 구독관리 서비스}에 대한 시장조사 프롬프트
@@ -257,21 +262,24 @@ mkdir -p ~/home/workspace/lifesub
 - Perplexisity를 이용하여 시장 조사  
   - 위에서 구한 프롬프트를 이용  
   - 결과를 복사하여 파일에 '시장조사' 제목으로 업로드: '텍스트 내용 추가' 메뉴 이용    
-    ![alt text](./images/image6.png)
+    ![](images/2025-09-17-01-04-31.png)  
 
 | [Top](#목차) |
 
 ---
 
 ### 고객경험 단계 정의
+
+예시)  
 ```
 o: 현재 고객경험 단계를 정의해 주세요.  
 [요청사항]
 - '생활 구독서비스 이용자'를 대상으로 생활구독 서비스에 대한 현재 고객경험 단계 정의 
+- 간단하게 고객경험 단계명만 응답
 [예시]
-- sample_고객경험인터뷰 결과지.docx
+인지 -> 탐색 및 평가 -> 가입 -> 이용 -> 관리 -> 최적화 -> 해지 -> 재가입 고려
 [결과형식]
-- 아티팩트
+- 코드블록
 ``` 
 
 | [Top](#목차) |
