@@ -70,7 +70,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4
 2)Claude Desktop에 주요 MCP서버 연결   
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#claude-desktop%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
 
-**3.Figma MACP 설치**      
+**3.Figma MCP 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#figma-mcp-%EC%84%A4%EC%B9%98
 
 **4.프로젝트 디렉토리 생성**     
