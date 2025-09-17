@@ -63,17 +63,21 @@
 **1.Node,Git,bun,Claude Desktop 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#%EC%82%AC%EC%A0%84%EC%9E%91%EC%97%85
 
-**2.Claude Desktop에 주요 MCP서버 연결**     
+**2.Microsoft Visual Studio Code 설치**   
+작업결과를 편집하기 위한 용도로 사용합니다.         
+https://code.visualstudio.com/ 에 접근하여 설치파일 다운로드하여 설치   
+
+**3.Claude Desktop에 주요 MCP서버 연결**     
 1)주요 MCP 이해 및 준비 작업     
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#%EC%A3%BC%EC%9A%94-mcp-%EC%9D%B4%ED%95%B4-%EB%B0%8F-%EC%A4%80%EB%B9%84-%EC%9E%91%EC%97%85
 
 2)Claude Desktop에 주요 MCP서버 연결   
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#claude-desktop%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
 
-**3.Figma MCP 설치**      
+**4.Figma MCP 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#figma-mcp-%EC%84%A4%EC%B9%98
 
-**4.프로젝트 디렉토리 생성**     
+**5.프로젝트 디렉토리 생성**     
 각 작업결과를 생성할 프로젝트 디렉토리를 생성합니다.     
 Mac 사용자는 기본 터미널에서 수행하고 Window 사용자는 Git Bash 터미널에서 수행합니다.    
 '{프로젝트}'는 MVP주제에 적절한 영문으로 지정합니다.    
@@ -84,6 +88,17 @@ mkdir -p ~/home/workspace/{프로젝트}
 예시)
 ```
 mkdir -p ~/home/workspace/lifesub
+```
+
+아래 명령으로 vscode에서 오픈해 놓습니다.    
+```
+cd ~/home/workspace/{프로젝트}
+code .
+```
+예시)
+```
+cd ~/home/workspace/lifesub
+code .
 ```
 
 **5.가이드 다운로드**    
@@ -191,11 +206,11 @@ Mac은 Finder, window는 탐색기 프로그램에서 사용자홈/home/workspac
 
   [작업지침]
   - '[참고자료]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{프로젝트} 하위에서 찾음 
-    예시)  실제 파일 경로: {사용자홈}/home/workspace/{프로젝트}/define/고객경험인터뷰결과.md
+    예시)  실제 파일 경로: {사용자홈}/home/workspace/{프로젝트}/define/고객경험인터뷰결과.md    
     [참고자료]
     define/고객경험인터뷰결과.md
   - '[결과파일]'이 지정되면 {사용자홈}/home/workspace/{프로젝트} 하위에 생성 
-    예시) 실제 파일 경로: {사용자홈}/home/workspace/{프로젝트}/define/관찰결과.md
+    예시) 실제 파일 경로: {사용자홈}/home/workspace/{프로젝트}/define/관찰결과.md     
     [결과파일]
     define/관찰결과.md
   ```
@@ -368,7 +383,8 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   ```
 
 - 결과파일 팀원들과 검토 및 수정      
-  
+    vscode에서 define 
+
 | [Top](#목차) |
 
 ---
@@ -796,7 +812,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   think/비즈니스모델.md
   ```
 
-- 결과파일 팀원들과 검토 및 수정 후 업로드
+- 결과파일 팀원들과 검토 및 수정
 
 | [Top](#목차) |
 
