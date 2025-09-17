@@ -72,6 +72,11 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4
 작업결과를 편집하기 위한 용도로 사용합니다.         
 https://code.visualstudio.com/ 에 접근하여 설치파일 다운로드하여 설치   
 
+Markdown Preview Enhanced 플러그인 설치   
+![](images/2025-09-17-22-12-36.png) 
+
+맥에서는 cmd-shift-v, Windows에서는 ctrl-shift-v로 마크다운 파일을 미리보기 할 수 있습니다.   
+
 **3.Claude Desktop에 주요 MCP서버 연결**     
 1)주요 MCP 이해 및 준비 작업     
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#%EC%A3%BC%EC%9A%94-mcp-%EC%9D%B4%ED%95%B4-%EB%B0%8F-%EC%A4%80%EB%B9%84-%EC%9E%91%EC%97%85
@@ -415,8 +420,8 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   vscode에서 define/ 디렉토리 밑에 파일을 오픈하여 편집      
   ![](images/2025-09-17-12-34-55.png)  
   
-  미리보기 기능을 이용하여 결과화면도 볼 수 있음.   
-  ![](images/2025-09-17-12-36-29.png)  
+  맥에서는 cmd-shift-v, Windows에서는 ctrl-shift-v로 마크다운 파일을 미리보기 할 수 있습니다.   
+  
  
 | [Top](#목차) |
 
@@ -582,7 +587,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - define/고객경험인터뷰결과.md 
   - define/유저저니맵.svg
   [예시]
-  - reference/sample_문제가설도출.pdf
+  - reference/sample_문제가설.md
   [결과형식]
   - 마크다운 표 
   [결과파일]
