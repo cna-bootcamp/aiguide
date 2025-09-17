@@ -111,7 +111,7 @@ cd ~/home/workspace/lifesub
 code .
 ```
 
-**5.가이드 다운로드**    
+**6.가이드 다운로드**    
 1)기획 가이드를 PC에 다운로드 합니다.         
 Mac 사용자는 기본 터미널에서 수행하고 Window 사용자는 Git Bash 터미널에서 수행합니다.  
 ```
@@ -131,6 +131,17 @@ cp aiguide/reference/* ~/home/workspace/${PROJECT}/reference/
 
 vscode에서 reference디렉토리 밑에 파일이 복사되었는지 확인합니다.    
   
+
+**7.Git 레포지토리 생성 및 푸시**   
+Git 레포지토리를 생성하여 중간 중간 원격 레포지토리에 푸시합니다.    
+서버에 작업결과를 저장하여 다른 사람과 쉽게 공유하기 위해 필요합니다.     
+
+https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-guide.md
+
+
+| [Top](#목차) |
+
+---
 
 ## 생성형AI 설정
 
