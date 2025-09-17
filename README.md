@@ -805,6 +805,8 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
     - Utilities: 실현가능성 높음, 비즈니스 영향도 낮음
     - Unwise: 실현가능성 낮음, 비즈니스 영향도 낮음   
   - 아이디어명 표시
+  [예시]
+  reference/sample-solution-proritization.png
   [결과형식]
   svg 파일로 작성 
   [결과파일]
