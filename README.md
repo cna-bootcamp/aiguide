@@ -319,7 +319,7 @@ Mac은 Finder, window는 탐색기 프로그램에서 사용자홈/home/workspac
     vscode에서 작성     
     - 'define'폴더 작성   
       ![](images/2025-09-17-16-35-18.png)    
-    - '시장조사.md'파일 생성     
+    - 'define'폴더 하위에 '시장조사.md'파일 생성     
       ![](images/2025-09-17-16-35-46.png)   
     - 내용 붙여넣고 저장       
   
