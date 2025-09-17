@@ -236,6 +236,11 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
   6) '1)번 ~ 5)번' 과정을 10번 반복함
   7) 최종으로 선정된 최적안을 제시함
 
+  [Git 연동]
+  - "pull" 명령어 입력 시 Git pull 명령을 수행하고 충돌이 있을 때 최신 파일로 병합 수행  
+  - "push" 또는 "푸시" 명령어 입력 시 git add, commit, push를 수행 
+  - Commit Message는 한글로 함
+    
   [작업지침]
   - '[예시]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{프로젝트} 하위에서 찾음
      예) 실제 파일 경로: {사용자홈}/home/workspace/{프로젝트}/reference/sample-관찰결과 레포트.pdf
