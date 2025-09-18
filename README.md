@@ -393,7 +393,10 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
   - 요청: AI에 시장조사 요청을 위한 프롬프트 생성
   - 결과: 코드블록 
   ```
-- Perplexisity를 이용하여 시장 조사  
+- Perplexisity를 이용하여 시장 조사
+  - 프롬프트 옵션 수정
+    '연구'모드 활성화, 서치 범위 조정 등
+    ![](images/2025-09-18-13-48-52.png)  
   - 위에서 구한 프롬프트를 이용  
   - 결과를 복사하여 {사용자홈}/home/workspace/{프로젝트}/define/시장조사.md로 저장  
     vscode에서 작성     
