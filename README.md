@@ -1010,7 +1010,7 @@ think/event-storming.puml
 [요청사항]
 - 대상 솔루션: AI 도구 종합 비교 및 통계 대시보드 
 - 이벤트스토밍 중 아래 단계만 수행하여 PlantUML의 시퀀스다이어그램으로 작성  
-  - 유저플로우별로 섹션을 분리
+  - 유저플로우별로 파일을 분리
   - 이벤트 도출
   - 커맨드 도출
   - Actor 도출
@@ -1023,7 +1023,8 @@ think/event-storming.puml
 [참고자료]
 think/핵심솔루션.md
 [결과파일]
-think/event-storming.puml
+- think/es-{flow}.puml
+- flow는 한글로 작성 
 ```
   
 **3.MVP기획 구체화**        
