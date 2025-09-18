@@ -972,7 +972,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   [참고자료]
   think/비즈니스모델.md
   [예시]
-  reference/sample_서비스기획서 스크립트.txt
+  reference/sample_서비스기획서스크립트.txt
   [결과형식]
   코드블록 
   [결과파일]
