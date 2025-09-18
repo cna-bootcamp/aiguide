@@ -981,6 +981,49 @@ gamma.app을 이용하여 빠르게 작성
 ---
 
 ## 기획 구체화 
+**1.MVP솔루션 결정**          
+think/핵심솔루션.md를 팀원들과 검토하여 MVP솔루션을 선정합니다.   
+
+**2.이벤트스토밍 초안 작성**                
+프롬프팅:
+```
+이벤트스토밍 기법을 이용하여 유저플로우 설계를 합니다.   
+[요청사항]
+- 대상 솔루션: {MVP대상 솔루션} 
+- 이벤트스토밍 중 아래 단계만 수행하여 PlantUML의 시퀀스다이어그램으로 작  
+  - 이벤트 도출
+  - 커맨드 도출
+  - 유저플로우를 화살표로 연결
+  - Actor 도출
+  - Policy/Rule 도출 
+- PlantUML 테마는 '!theme mono' 사용
+- Sequential MCP 이용  
+[참고자료]
+think/핵심솔루션.md
+[결과파일]
+think/event-storming.puml
+```
+
+예시)
+```
+이벤트스토밍 기법을 이용하여 유저플로우 설계를 합니다.   
+[요청사항]
+- 대상 솔루션: AI 도구 종합 비교 및 통계 대시보드 
+- 이벤트스토밍 중 아래 단계만 수행하여 PlantUML의 시퀀스다이어그램으로 작  
+  - 이벤트 도출
+  - 커맨드 도출
+  - 유저플로우를 화살표로 연결
+  - Actor 도출
+  - Policy/Rule 도출 
+- PlantUML 테마는 '!theme mono' 사용
+- Sequential MCP 이용  
+[참고자료]
+think/핵심솔루션.md
+[결과파일]
+think/event-storming.puml
+```
+  
+**3.MVP기획 구체화**        
 DDD 전략설계 방법인 Event Storming기법을 이용하여 기획을 구체화 합니다.    
 기획 구체화는 Figma에서 수행합니다.    
 
