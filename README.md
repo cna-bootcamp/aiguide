@@ -239,9 +239,9 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
   [작업지침]
   - PROJECT: {프로젝트 디렉토리}
   - '[예시]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음
-     예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/reference/sample-관찰결과 레포트.pdf
+     예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/reference/sample-관찰결과 레포트.md
      [예시]
-     reference/sample-관찰결과 레포트.pdf 
+     reference/sample-관찰결과 레포트.md 
   - '[참고자료]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음 
     예)  실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/define/고객경험인터뷰결과.md    
     [참고자료]
@@ -308,9 +308,9 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
   [작업지침]
   - PROJECT: genai-portal
   - '[예시]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음
-     예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/reference/sample-관찰결과 레포트.pdf
+     예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/reference/sample-관찰결과 레포트.md
      [예시]
-     reference/sample-관찰결과 레포트.pdf 
+     reference/sample-관찰결과 레포트.md 
   - '[참고자료]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음 
     예)  실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/define/고객경험인터뷰결과.md    
     [참고자료]
@@ -457,7 +457,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - 고객경험 단계: 인지 -> 탐색 및 평가 -> 가입 -> 이용 -> 관리 -> 최적화 -> 해지 -> 재가입 고려
   - 프로필에 연령대를 포함  
   [예시]
-  - reference/sample_관찰결과보고서.pdf  
+  - reference/sample_관찰결과보고서.md  
   [결과형식]
   - 마크다운 표
   [결과파일]
@@ -472,7 +472,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - 고객경험 단계: 인지 -> 탐색 및 평가 -> 가입 -> 이용 -> 관리 -> 최적화 -> 해지 -> 재가입 고려
   - 프로필에 연령대를 포함  
   [예시]
-  - reference/sample_관찰결과보고서.pdf  
+  - reference/sample_관찰결과보고서.md  
   [결과형식]
   - 마크다운 표
   [결과파일]
@@ -499,7 +499,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - 목적: 서비스 기획 전 현재 환경에서의 고객 행동, 인식, 감정 반응 및 불편 사항 분석을 통한 현재 문제와 잠재 니즈 발굴
   - 고객경험 단계: {고객경험 단계}
   [예시]
-  - reference/sample_체험결과보고서.pdf  
+  - reference/sample_체험결과보고서.md  
   [결과형식]
   - 마크다운 표
   [결과파일]
@@ -513,7 +513,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - 목적: 서비스 기획 전 현재 환경에서의 고객 행동, 인식, 감정 반응 및 불편 사항 분석을 통한 현재 문제와 잠재 니즈 발굴
   - 고객경험 단계: 인지 -> 탐색 및 평가 -> 가입 -> 이용 -> 관리 -> 최적화 -> 해지 -> 재가입 고려
   [예시]
-  - reference/sample_체험결과보고서.pdf  
+  - reference/sample_체험결과보고서.md  
   [결과형식]
   - 마크다운 표
   [결과파일]
@@ -536,7 +536,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - 고객 경험 단계: {고객경험 단계}
   - 각 단계에서의 행동, 생각, 긍정적 느낌, 부정적 느낌으로 섹션을 나누어 작성 
   [예시]
-  - reference/sample_고객경험인터뷰결과지.pdf
+  - reference/sample_고객경험인터뷰결과지.md
   [결과형식]
   아티팩트
   [결과파일]
@@ -552,7 +552,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - 고객 경험 단계: 인지 -> 탐색 및 평가 -> 가입 -> 이용 -> 관리 -> 최적화 -> 해지 -> 재가입 고려
   - 각 단계에서의 행동, 생각, 긍정적 느낌, 부정적 느낌으로 섹션을 나누어 작성 
   [예시]
-  - reference/sample_고객경험인터뷰결과지.pdf
+  - reference/sample_고객경험인터뷰결과지.md
   [결과형식]
   - 아티팩트
   [결과파일]
@@ -683,7 +683,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   [참고자료]
   - define/문제가설.md
   [예시]
-  - reference/sample_문제검증인터뷰결과.pdf
+  - reference/sample_문제검증인터뷰결과.md
   [결과형식]
   - 아티팩트  
   [결과파일]
@@ -704,7 +704,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   [참고자료]
   - define/문제검증인터뷰결과.md
   [예시]
-  - reference/sample_문제검증인터뷰결과취합.pdf
+  - reference/sample_문제검증인터뷰결과취합.md
   [결과형식]
   - 마크다운 표
   [결과파일]
