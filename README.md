@@ -1026,12 +1026,21 @@ think/핵심솔루션.md
 - think/es-{flow}.puml
 - flow는 한글로 작성 
 ```
-  
+
+결과는 아래와 같이 확인합니다.    
+- PlantUML Site 접속: https://plantuml.com
+- 좌측메뉴에서 Online Server 클릭
+- PlantUML 스크립트 붙여넣기   
+- 하단 우측에서 PNG나 SVG의 우측 마우스 메뉴에서 '새 탭에서 링크 열기' 선택   
+  ![](images/2025-09-18-17-33-33.png)
+
 **3.MVP기획 구체화**        
 DDD 전략설계 방법인 Event Storming기법을 이용하여 기획을 구체화 합니다.    
 기획 구체화는 Figma에서 수행합니다.    
+위 이벤트스토밍 초안을 참고하여 작업합니다.   
 
 https://github.com/cna-bootcamp/clauding-guide/tree/main?tab=readme-ov-file#2%EA%B8%B0%ED%9A%8D-%EA%B5%AC%EC%B2%B4%ED%99%94
+
 
 | [Top](#목차) |
 
