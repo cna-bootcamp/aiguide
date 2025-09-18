@@ -322,10 +322,6 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
     define/관찰결과.md
   ```  
 
-- '파일'에 협업에 필요한 자료를 업로드   
-  Mac은 Finder, window는 탐색기 프로그램에서 사용자홈/home/workspace/aiguide/reference 디렉토리 밑으로 이동합니다.    
-  reference 디렉토리 하위의 모든 파일을 drag하여 Claude Project의 파일에 Drop합니다.   
-
 - AI 모델은 기본인 'Sonnet' 사용  
   ![](images/2025-09-17-00-17-48.png)  
 
