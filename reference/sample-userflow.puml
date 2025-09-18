@@ -1,0 +1,42 @@
+@startuml userflow
+!theme mono
+
+title AI 도구 종합 비교 및 통계 대시보드 - 유저플로우 연결도
+
+actor "일반 사용자" as User
+actor "관리자" as Admin
+participant "AI 도구 탐색 및 검색\n(01-탐색검색)" as Flow01
+participant "AI 도구 비교\n(02-도구비교)" as Flow02
+participant "AI 도구 상세정보 조회\n(03-상세조회)" as Flow03
+participant "개인화 및 즐겨찾기\n(04-개인화)" as Flow04
+participant "리뷰 및 평가\n(05-리뷰평가)" as Flow05
+participant "데이터 관리\n(06-데이터관리)" as Flow06
+
+== 사용자 여정 플로우 ==
+
+User -> Flow01 : 1. AI 도구 탐색 시작
+Flow01 --> Flow02 : 2. 검색 결과에서 비교 선택
+Flow01 --> Flow03 : 3. 검색 결과에서 상세 조회
+Flow02 --> Flow03 : 4. 비교표에서 상세 정보 확인
+Flow03 --> Flow04 : 5. 관심 도구 즐겨찾기 추가
+Flow03 --> Flow05 : 6. 사용 경험 리뷰 작성
+Flow04 --> Flow01 : 7. 개인화된 추천에서 재탐색
+Flow05 --> Flow03 : 8. 리뷰 작성 후 상세 정보 재확인
+
+== 관리자 운영 플로우 ==
+
+Admin -> Flow06 : 9. 데이터 수집 및 관리
+Flow06 --> Flow01 : 10. 업데이트된 데이터 제공
+Flow06 --> Flow02 : 11. 비교 데이터 품질 개선
+Flow06 --> Flow03 : 12. 상세 정보 정확성 향상
+
+== 플로우 순환 구조 ==
+
+note over Flow01, Flow06
+사용자는 탐색→비교→상세조회→개인화의
+순환 구조로 서비스를 이용하며,
+관리자는 지속적인 데이터 관리를 통해
+서비스 품질을 유지합니다.
+end note
+
+@enduml

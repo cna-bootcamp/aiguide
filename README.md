@@ -1000,12 +1000,14 @@ think/핵심솔루션.md를 팀원들과 검토하여 MVP솔루션을 선정합�
   - 이벤트에 필요한 데이터 식별하여 이벤트에 표시 
 - **한국어 사용**    
 - 결과파일 작성 
-  - 유저플로우간의 연결을 별도 파일로 작성: es-flow.puml
-  - 각 유저플로우별로 파일을 분리: es-{flow}.puml
+  - 유저플로우간의 연결을 별도 파일로 작성: userflow.puml
+  - 각 유저플로우별로 파일을 분리: {userflow ID}-{userflow}.puml
   - PlantUML 테마는 '!theme mono' 사용
 - Sequential MCP 이용  
 [참고자료]
 think/핵심솔루션.md
+[예시]
+유저플로우간 연결: reference/sample-userflow.puml
 [결과파일]
 - think/es/userflow.puml
 - think/es/{userflow ID}-{userflow}.puml
@@ -1028,12 +1030,14 @@ think/핵심솔루션.md
   - 이벤트에 필요한 데이터 식별하여 이벤트에 표시 
 - **한국어 사용**  
 - 결과파일 작성 
-  - 유저플로우간의 연결을 별도 파일로 작성: es-flow.puml
-  - 각 유저플로우별로 파일을 분리: es-{flow}.puml
+  - 유저플로우간의 연결을 별도 파일로 작성: userflow.puml
+  - 각 유저플로우별로 파일을 분리: {userflow ID}-{userflow}.puml
   - PlantUML 테마는 '!theme mono' 사용
 - Sequential MCP 이용  
 [참고자료]
 think/핵심솔루션.md
+[예시]
+유저플로우간 연결: reference/sample-userflow.puml
 [결과파일]
 - think/es/userflow.puml
 - think/es/{userflow ID}-{userflow}.puml
