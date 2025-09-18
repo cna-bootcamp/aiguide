@@ -1010,11 +1010,11 @@ think/event-storming.puml
 [요청사항]
 - 대상 솔루션: AI 도구 종합 비교 및 통계 대시보드 
 - 이벤트스토밍 중 아래 단계만 수행하여 PlantUML의 시퀀스다이어그램으로 작  
+  - 유저플로우별로 섹션을 분리
   - 이벤트 도출
   - 커맨드 도출
-  - 유저플로우를 화살표로 연결
   - Actor 도출
-  - Policy/Rule 도출 
+  - Policy/Rule 도출하여 해당 이벤트에 표시   
 - PlantUML 테마는 '!theme mono' 사용
 - Sequential MCP 이용  
 [참고자료]
