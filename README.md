@@ -1059,6 +1059,7 @@ https://github.com/cna-bootcamp/clauding-guide/tree/main?tab=readme-ov-file#2%EA
 ---
 
 ## 유저스토리 작성   
+**1.Figma 연동하여 작성**        
 Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 빠르게 만듭니다.    
 
 - 프롬프팅
@@ -1090,9 +1091,27 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
   [결과파일]
   design/userstory.md
   ```
-
 - 결과파일 팀원들과 검토 및 수정
 
+**2.시퀀스다이어그램 연동하여 작성**          
+- 프롬프팅
+  ```
+  유저스토리를 작성하세요. 
+  [요청사항]
+  - 시퀀스 다이어그램을 분석   
+  - '유저스토리작성방법'과 'sample_유저스토리'를 참고하여 유저스토리 작성  
+  - Sequential MCP 이용 
+  [참고자료]
+  think/es/*.puml
+  reference/유저스토리작성방법.md
+  [예시] 
+  reference/sample_유저스토리.md
+  [결과파일]
+  design/userstory.md
+  ```
+
+- 결과파일 팀원들과 검토 및 수정
+  
 | [Top](#목차) |
 
 ---
