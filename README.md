@@ -1025,9 +1025,10 @@ think/event-storming.puml
 [참고자료]
 think/핵심솔루션.md
 [결과파일]
-- think/es-flow.puml
-- think/es-{flow}.puml
-- flow는 한글로 작성 
+- think/es/userflow.puml
+- think/es/{userflow ID}-{userflow}.puml
+- {userflow ID}는 순서별 일련번호 부여 
+- {userflow}는 한글로 작성 
 ```
 
 결과는 아래와 같이 확인합니다.    
