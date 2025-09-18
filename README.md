@@ -989,19 +989,27 @@ think/핵심솔루션.md를 팀원들과 검토하여 MVP솔루션을 선정합�
 ```
 이벤트스토밍 기법을 이용하여 유저플로우 설계를 합니다.   
 [요청사항]
-- 대상 솔루션: {MVP대상 솔루션} 
+- 대상 솔루션: {MVP대상 솔루션}
 - 이벤트스토밍 중 아래 단계만 수행하여 PlantUML의 시퀀스다이어그램으로 작성  
   - 이벤트 도출
   - 커맨드 도출
-  - 유저플로우를 화살표로 연결
   - Actor 도출
-  - Policy/Rule 도출 
-- PlantUML 테마는 '!theme mono' 사용
+  - Policy/Rule 도출하여 해당 이벤트에 표시   
+  - External System 도출
+  - 커맨드에 필요한 데이터 식별하여 커맨드에 표시
+  - 이벤트에 필요한 데이터 식별하여 이벤트에 표시 
+- 결과파일 작성 
+  - 유저플로우간의 연결을 별도 파일로 작성: es-flow.puml
+  - 각 유저플로우별로 파일을 분리: es-{flow}.puml
+  - PlantUML 테마는 '!theme mono' 사용
 - Sequential MCP 이용  
 [참고자료]
 think/핵심솔루션.md
 [결과파일]
-think/event-storming.puml
+- think/es/userflow.puml
+- think/es/{userflow ID}-{userflow}.puml
+- {userflow ID}는 순서별 일련번호 부여 
+- {userflow}는 한글로 작성 
 ```
 
 예시)
