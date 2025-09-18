@@ -9,7 +9,6 @@
   - [생성형AI 설정](#생성형ai-설정)
     - [Claude 설정](#claude-설정)
     - [ChatGPT](#chatgpt)
-    - [Perplexsity 설정](#perplexsity-설정)
     - [프롬프팅 기본 구성](#프롬프팅-기본-구성)
   - [문제정의](#문제정의)
     - [시장조사](#시장조사)
@@ -336,26 +335,6 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
 - 검색창에서 GPT명 검색 
 - 상단 타이틀에서 '사이드바에 유지' 클릭  
   ![alt text](./images/image.png)
-
-| [Top](#목차) |
-
----
-
-### Perplexsity 설정
-바로가기: [Perplexity](https://www.perplexity.ai)  
-- 설정 클릭  
-![alt text](./images/image-1.png)
-- 개인 프로파일에 Facts와 Opinion으로 나누어 답변하도록 설정  
-  ![alt text](./images/image-2.png)  
-
-  ```
-  [결과출력 요구사항]
-  - {Facts}와 {Opinions}로 나누어 응답
-  - 'Facts'는 근거가 되는 URL링크를 함께 제공 
-  ```
-- AI 모델 선택   
-  ![](images/2025-05-13-12-05-21.png)  
-
 
 | [Top](#목차) |
 
