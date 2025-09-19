@@ -1293,5 +1293,9 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
 ## 부록: 생성형AI의 비즈니스 활용
 
 1. 요약본:    
+https://github.com/cna-bootcamp/aiguide/blob/main/paper/%EC%83%9D%EC%84%B1%ED%98%95AI%EC%9D%98%20%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%20%ED%99%9C%EC%9A%A9(%EC%9A%94%EC%95%BD).md
+
 
 2. 전체본:    
+https://github.com/cna-bootcamp/aiguide/blob/main/paper/%EC%83%9D%EC%84%B1%ED%98%95AI%EC%9D%98%20%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%20%ED%99%9C%EC%9A%A9.pdf
+
