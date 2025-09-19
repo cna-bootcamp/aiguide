@@ -1,7 +1,20 @@
 # 생성형AI를 이용한 서비스 기획 실습 가이드
 
+## 📄 라이선스
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+
+이 저작물은 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/) 하에 배포됩니다.
+
+- **저작자 표시**: 원작자(이해경, 유니콘주식회사 대표)와 출처를 명시해야 합니다.
+- **비상업적 이용**: 상업적 목적으로 사용할 수 없습니다.
+- **동일 조건 변경 허락**: 이 저작물을 변경, 변형하거나 2차 저작물을 작성하여 배포하는 경우 원 저작물과 동일한 라이선스를 적용해야 합니다.
+
+**저작자**: 이해경 (hiondal@gmail.com), 유니콘주식회사 대표  
+
 ## 목차
 - [생성형AI를 이용한 서비스 기획 실습 가이드](#생성형ai를-이용한-서비스-기획-실습-가이드)
+  - [📄 라이선스](#-라이선스)
   - [목차](#목차)
   - [MVP 주제 정의](#mvp-주제-정의)
   - [대상고객유형 정의](#대상고객유형-정의)
@@ -34,6 +47,7 @@
   - [유저스토리 작성](#유저스토리-작성)
   - [UI/UX설계서 작성](#uiux설계서-작성)
   - [프로토타입 개발](#프로토타입-개발)
+  - [부록: 생성형AI의 비즈니스 활용](#부록-생성형ai의-비즈니스-활용)
 
 ---
 
@@ -1276,3 +1290,8 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
 
 ---
 
+## 부록: 생성형AI의 비즈니스 활용
+
+1. 요약본:    
+
+2. 전체본:    
