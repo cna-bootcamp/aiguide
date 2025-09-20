@@ -803,5 +803,5 @@ AI·위성·모바일 데이터 융합으로
 ---
 
 ## 참고문헌: 
-**Generative AI Business Application**: An Executive Guide with Real-life examples and case studies
+**Generative AI Business Application**: An Executive Guide with Real-life examples and case studies    
 데이비드 스위너(David Sweenor) & 이브 멀커스(Yves Mulkers)
