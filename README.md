@@ -1230,6 +1230,7 @@ https://brunch.co.kr/@leoyh23/5
 
   [참고자료]
   - design/userstory.md
+  - UI/UX설계서: design/uiux/uiux.md
   [레퍼런스 사이트]
   https://wwit.design/2024/12/24/wrtn/
   [결과파일] 
