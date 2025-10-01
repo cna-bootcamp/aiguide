@@ -1238,6 +1238,7 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
     - 버그 수정 및 화면 개선 
   
   [참고자료]
+  - design/userstory.md
   - design/uiux/style-guide.md 
   - design/uiux/uiux.md
 
@@ -1329,6 +1330,7 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
     - 버그 수정 및 화면 개선 
 
   [참고자료]
+  - design/userstory.md
   - design/uiux/style-guide.md 
   - design/uiux/uiux.md
 
