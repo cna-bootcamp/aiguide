@@ -921,7 +921,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - Sequential MCP 이용 
   [참고자료]
   - define/문제검증인터뷰결과취합.md
-  - think/비즈니스가치.md
+  - define/비즈니스가치.md
   - think/문제해결방향성.md
   - think/핵심솔루션.md
   - reference/LeanCanvas작성가이드.txt
@@ -940,7 +940,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - Sequential MCP 이용 
   [참고자료]
   - define/문제검증인터뷰결과취합.md
-  - think/비즈니스가치.md
+  - define/비즈니스가치.md
   - think/문제해결방향성.md
   - think/핵심솔루션.md
   - reference/LeanCanvas작성가이드.txt
