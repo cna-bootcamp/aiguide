@@ -1142,9 +1142,19 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
 ---
 
 ## UI/UX설계서 작성   
+
+레퍼런스 사이트는 검색해서 적절한 사이트의 주소를 제공합니다.  
+
+참고 사이트)  
+https://www.elancer.co.kr/blog/detail/226   
+https://brunch.co.kr/@leoyh23/5   
+
+
 - 프롬프팅   
   ```
+  UI/UX설계서와 스타일가이드를 작성해 주세요. 
   [요청사항]
+  - '[레퍼런스 사이트]'를 Playwright MCP를 이용하여 브라우저에서 열어 파악한 후 설계  
   - <작성원칙>을 준용하여 설계
   - <작성순서>에 따라 설계
   - [결과파일] 안내에 따라 파일 작성  
@@ -1188,7 +1198,8 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
 
   [참고자료]
   - design/userstory.md
-
+  [레퍼런스 사이트]
+  https://wwit.design/2024/12/24/wrtn/
   [결과파일] 
   - 스타일가이드: design/uiux/style-guide.md 
   - UI/UX설계서: design/uiux/uiux.md
