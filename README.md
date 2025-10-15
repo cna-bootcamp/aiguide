@@ -895,7 +895,8 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
   - 우선순위 평가 매트릭스를 svg파일로 작성: 솔루션우선순위평가.svg
   - No Brainers 아이디어를 마크다운표로 작성
     - 컬럼: 아이디어 제목, 설명, 비즈니스 가치, 실현 가능성 
-    - 솔루션선정.md
+    - No Brainers 아이디어가 없으면 Bit Bets와 Utilities 아이디어까지 마크다운표로 작성
+    - 결과파일: 핵심솔루션.md
   [예시]
   reference/sample-solution-proritization.png
   [참고자료]
