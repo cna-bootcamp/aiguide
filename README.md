@@ -1148,8 +1148,12 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
 레퍼런스 사이트는 검색해서 적절한 사이트의 주소를 제공합니다.  
 
 참고 사이트)  
-https://www.elancer.co.kr/blog/detail/226   
-https://brunch.co.kr/@leoyh23/5   
+- https://wwit.design/
+- https://ko.designus.design/web-reference
+
+더 많은 참고 사이트)
+- https://www.elancer.co.kr/blog/detail/226   
+- https://brunch.co.kr/@leoyh23/5   
 
 
 - UI/UX설계서 프롬프팅   
