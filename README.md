@@ -333,15 +333,15 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
     - 애자일 컨설팅 회사 창업 및 5년간 운영
     - 국제 애자일 연합회 인증 트레이너
   ```
-- CLAUDE.md 파일 생성 후 목표, 팀 행동원칙, 팀원, 대화 가이드, 최적안 도출 가이드 등 AI와의 협업에 필요한 지침 설정   
-  
-  Cursor도 지침 파일로 CLAUDE.md 사용합니다.   
-  '[멤버]'는 Claude가 제시한 멤버를 적절하게 수정하여 붙여넣기   
- 
+- 루트에 CLAUDE.md 파일 생성 후 지침 등록
+  - 목표, 팀 행동원칙, 팀원, 대화 가이드, 최적안 도출 가이드 등 AI와의 협업에 필요한 지침 설정   
+  - '[멤버]'는 위에서 구한 멤버를 적절하게 수정하여 붙여넣기   
+   
   예시)  
   https://github.com/cna-bootcamp/clauding-guide/blob/main/references/sample-basic-instruction.md
 
-
+  참고) Cursor도 지침 파일로 CLAUDE.md 사용합니다.   
+  
 | [Top](#목차) |
 
 ---
