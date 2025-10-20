@@ -341,7 +341,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
   https://github.com/cna-bootcamp/clauding-guide/blob/main/references/sample-basic-instruction.md
 
   참고) Cursor도 지침 파일로 CLAUDE.md 사용합니다.   
-  
+
 | [Top](#목차) |
 
 ---
@@ -417,7 +417,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
     ![](images/2025-09-18-13-48-52.png)  
   - 위에서 구한 프롬프트를 이용  
   - 결과를 복사하여 {사용자홈}/home/workspace/{프로젝트}/define/시장조사.md로 저장  
-    vscode에서 작성     
+    Claude Desktop과 Claude Code는 vscode에서 작성하고 Cursor는 Cursor 내에서 작성함.        
     - 'define'폴더 작성   
       ![](images/2025-09-17-16-35-18.png)    
     - 'define'폴더 하위에 '시장조사.md'파일 생성     
@@ -430,12 +430,17 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
 
 ---
 
-아래 부터는 Claude Desktop에서 수행합니다.    
+**이후 작업 안내**   
+1)Claude Desktop 사용 시   
+Claude Desktop 사용 시에는 이후 작업은 Claude Desktop 프롬프트 창에서 수행합니다.    
 각 작업은 한 대화창에서 하지 말고 각각 새로운 대화창에서 수행하세요.    
 한 대화창에서 하면 토큰 소비도 많고 나중에 찾을 때 힘들기 때문입니다.    
-
 Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니다.   
 ![](images/2025-09-17-01-48-07.png)  
+
+2)Claude Code 또는 Cursor 사용 시 
+이후 작업은 Claude Code 또는 Cursor 프롬프트 창에서 수행합니다.    
+Claude Code 사용 시 각 작업 완료 후 '/clear'명령으로 이전 대화를 초기화하는게 토큰을 절약하는데 좋습니다.   
   
 ### 고객경험 단계 정의
 - 프롬프팅:    
