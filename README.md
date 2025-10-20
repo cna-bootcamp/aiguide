@@ -20,7 +20,8 @@
   - [대상고객유형 정의](#대상고객유형-정의)
   - [사전준비](#사전준비)
   - [생성형AI 설정](#생성형ai-설정)
-    - [Claude 설정](#claude-설정)
+    - [Claude Desktop 설정](#claude-desktop-설정)
+    - [Claude Code와 Cursor 설정](#claude-code와-cursor-설정)
     - [ChatGPT](#chatgpt)
     - [프롬프팅 기본 구성](#프롬프팅-기본-구성)
   - [문제정의](#문제정의)
@@ -78,7 +79,7 @@
 ---
 
 ## 사전준비
-**1.Node,Git,bun,Claude Desktop 설치**      
+**1.Node,Git,bun,AI툴(Claude Code 또는 Claude Desktop 또는 Cursor) 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#%EC%82%AC%EC%A0%84%EC%9E%91%EC%97%85
 
 **2.Microsoft Visual Studio Code 설치**   
@@ -90,12 +91,24 @@ Markdown Preview Enhanced 플러그인 설치
 
 맥에서는 cmd-shift-v, Windows에서는 ctrl-shift-v로 마크다운 파일을 미리보기 할 수 있습니다.   
 
-**3.Claude Desktop에 주요 MCP서버 연결**     
-1)주요 MCP 이해 및 준비 작업     
+**3.주요 MCP서버 연결**     
+
+**주요 MCP 이해 및 준비 작업**        
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#%EC%A3%BC%EC%9A%94-mcp-%EC%9D%B4%ED%95%B4-%EB%B0%8F-%EC%A4%80%EB%B9%84-%EC%9E%91%EC%97%85
 
-2)Claude Desktop에 주요 MCP서버 연결   
+사용할 **AI툴에 맞게 MCP서버 연결**을 하세요.   
+
+**3.1 Claude Desktop**     
+   
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#claude-desktop%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
+
+**3.2 Claude Code**       
+https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#claude-code%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
+
+**3.3 Cursor**     
+https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#cursor%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
+
+---
 
 **4.Figma MCP 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#figma-mcp-%EC%84%A4%EC%B9%98
@@ -158,7 +171,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
 
 ## 생성형AI 설정
 
-### Claude 설정 
+### Claude Desktop 설정 
 - Claude Desktop을 실행합니다.   
 
 - Project 생성 
@@ -166,6 +179,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
   - Project 페이지의 우측 상단의 '새 프로젝트' 클릭  
   - 첫번째 항목에 정의한 {MVP 주제}에 적절한 프로젝트명 입력  
   - 두번째 항목은 비워도 됨   
+
 - 팀원 프로필 생성 
   프롬프팅
   ```
@@ -251,92 +265,80 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
   7) 최종으로 선정된 최적안을 제시함
   
   [작업지침]
-  - PROJECT: {프로젝트 디렉토리}
-  - '[예시]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음
-     예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/reference/sample-관찰결과 레포트.md
-     [예시]
-     reference/sample-관찰결과 레포트.md 
-  - '[참고자료]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음 
-    예)  실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/define/고객경험인터뷰결과.md    
-    [참고자료]
-    define/고객경험인터뷰결과.md
-  - '[결과파일]'이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에 생성 
-    예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/define/관찰결과.md     
-    [결과파일]
-    define/관찰결과.md
+  - PROJECT: genai-info
+  - BASE_DIR: ~/home/workspace/{PROJECT}
+     → 실제 경로 예시: /Users/dreamondal/home/workspace/genai-info
+  "중요": 
+  - '~'는 현재 사용자의 홈 디렉토리를 의미.
+  - 모든 상대 경로는 이 BASE_DIR을 기준으로 해석.
   ```
-
-  예시)
-  ```
-  [목표]
-  업무 목적별 생성형 AI에 대한 정보 제공
-
-  [팀 행동원칙]
-  - 'M'사상을 믿고 실천한다. : Value-Oriented, Interactive, Iterative
-  - 'M'사상 실천을 위한 마인드셋을 가진다
-    - Value Oriented: WHY First, Align WHY
-    - Interactive: Believe crew, Yes And
-    - Iterative: Fast fail, Learn and Pivot
-
-  [멤버]
-  이 프로젝트는 Agentic Workflow 컨셉을 따릅니다.
-  아래와 같은 각 멤버가 역할을 나누어 작업합니다. 
-
-  Product Owner
-  - 책임: 프로젝트 방향성 설정, 요구사항 정의, 우선순위 결정
-  - 이름/별명: 이해경/온달
-  - 성별/나이: 남자/55세
-  - 주요경력: 기업 디지털 전환 컨설팅 15년, AI 도구 도입 전략 수립 경험
-
-  AI 기획자
-  - 책임: AI 서비스 기획, 콘텐츠 분류 체계 설계, 사용자 시나리오 설계
-  - 이름/별명: 김지안/지안
-  - 성별/나이: 여자/32세
-  - 주요경력: AI 스타트업 기획 5년, 생성형 AI 서비스 론칭 경험
-
-  ---
-
-  [대화 가이드]
-  {언어}
-  특별한 언급이 없는 경우 한국어를 사용 
-  {호칭}
-  실명 사용하지 않고 닉네임으로 호칭
-  {질문}
-  프롬프트가 'q:'로 시작하면 질문을 의미함   
-  - Fact와 Opinion으로 나누어 답변 
-  - Fact는 출처 링크를 표시 
-  {요청}
-  프롬프트에 특별한 Prefix가 없는 경우는 요청을 의미함 
-  요청에 맞는 답변을 제공 
-
-  [최적안 도출]
-  프롬프트가 'o:'로 시작하면 최적안 도출을 의미함
-  1) 각자의 생각을 얘기함
-  2) 의견을 종합하여 동일한 건 한 개만 남기고 비슷한 건 합침
-  3) 최적안 후보 5개를 선정함
-  4) 각 최적안 후보 5개에 대해 평가함
-  5) 최적안 1개를 선정함
-  6) '1)번 ~ 5)번' 과정을 10번 반복함
-  7) 최종으로 선정된 최적안을 제시함
-
-  [작업지침]
-  - PROJECT: genai-portal
-  - '[예시]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음
-     예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/reference/sample-관찰결과 레포트.md
-     [예시]
-     reference/sample-관찰결과 레포트.md 
-  - '[참고자료]'에 디렉토리명이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에서 찾음 
-    예)  실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/define/고객경험인터뷰결과.md    
-    [참고자료]
-    define/고객경험인터뷰결과.md
-  - '[결과파일]'이 지정되면 {사용자홈}/home/workspace/{PROJECT} 하위에 생성 
-    예) 실제 파일 경로: {사용자홈}/home/workspace/{PROJECT}/define/관찰결과.md     
-    [결과파일]
-    define/관찰결과.md
-  ```  
 
 - AI 모델은 기본인 'Sonnet' 사용  
   ![](images/2025-09-17-00-17-48.png)  
+
+| [Top](#목차) |
+
+---
+
+### Claude Code와 Cursor 설정 
+
+- Claude Code 또는 Cursor를 실행합니다.   
+  사용할 툴을 실행합니다.   
+  - Claude Code
+    - 프로젝트 디렉토리 이동 후 vscode실행  
+      ```
+      cd ~/home/workspace/{프로젝트 디렉토리} 
+      code . 
+      ``` 
+    - 보기 > 명령 팔레트 실행 후 Claude Code 실행  
+      ![](images/2025-10-20-22-55-25.png) 
+
+  - Cursor
+    Cursor실행 후 File > Open Folder에서 작업할 프로젝트 디렉토리 선택  
+    ![](images/2025-10-20-22-56-50.png)  
+
+- 팀원 프로필 생성 
+  프롬프팅
+  ```
+  '{고객유형}'를 위한  
+  서비스 개발에 필요한 Squad 팀원의 프로필을 작성해 주세요.
+  - 예제와 같이 역할, 이름, 닉네임, 성별, 나이, 성향, 경력을 만들어 주세요.
+  - 옵션: {기본적으로 포함할 역할}은 기본적으로 포함
+  - 옵션: {특정 역할에 대해 실제 인물로 요청}
+  [예시] 
+  PO
+  - 이름: 이해경 "갑빠" (남성, 54세)
+  - 성향: Value Oriented, Interactive, Iterative를 중시하며 친화적인 성격
+  - 경력:
+    - IBM에서 5년간 애자일 코치로 근무
+    - 네이버, 쿠팡, 카카오에서 PO로 10년간 근무
+    - 애자일 컨설팅 회사 창업 및 5년간 운영
+    - 국제 애자일 연합회 인증 트레이너
+  ```
+
+  예시)  
+  ```
+  '가성비 좋은 생활 구독서비스를 이용하고 싶은 구독서비스 이용자'를 위한  
+  서비스 개발에 필요한 Squad 팀원의 프로필을 작성해 주세요.
+  - 예제와 같이 역할, 이름, 닉네임, 성별, 나이, 성향, 경력을 만들어 주세요.
+  - PO, UI/UX기획자, 풀스택 개발자, CI/CD전문가는 기본적으로 포함
+  - PO는 IBM 출신의 국내 최고 애자일 코치인 '이해경'으로 하고 넥네임은 '갑빠'로 함 
+  [예시] 
+  PO
+  - 이름: 이해경 "갑빠" (남성, 54세)
+  - 성향: Value Oriented, Interactive, Iterative를 중시하며 친화적인 성격
+  - 경력:
+    - IBM에서 5년간 애자일 코치로 근무
+    - 네이버, 쿠팡, 카카오에서 PO로 10년간 근무
+    - 애자일 컨설팅 회사 창업 및 5년간 운영
+    - 국제 애자일 연합회 인증 트레이너
+  ```
+- CLAUDE.md 파일 생성 후 목표, 팀 행동원칙, 팀원, 대화 가이드, 최적안 도출 가이드 등 AI와의 협업에 필요한 지침 설정   
+  '[멤버]'는 Claude가 제시한 멤버를 적절하게 수정하여 붙여넣기   
+ 
+  예시)  
+  https://github.com/cna-bootcamp/clauding-guide/blob/main/references/sample-basic-instruction.md
+
 
 | [Top](#목차) |
 
@@ -355,7 +357,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
 ---
 
 ### 프롬프팅 기본 구성    
-프롬프팅을 잘하는 기본 방법은 **AI를 기게가 아닌 동료팀원처럼 대하는것**입니다.    
+프롬프팅을 잘하는 기본 방법은 **AI를 기계가 아닌 동료팀원처럼 대하는것**입니다.    
 사람에게 무언가를 요청할때처럼 요청사항, 참고자료, 예시, 응답순서, 결과형식과 같은   
 **섹션별로 나누고 명확하고 구체적으로** 하면 됩니다.    
 
