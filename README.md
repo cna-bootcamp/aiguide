@@ -94,7 +94,7 @@ Cursor에서는 Extenstions를 클릭하고 'markdown'으로 검색 후 'Markdow
 ![](images/2025-10-20-23-21-03.png)  
 
 맥에서는 cmd-shift-v, Windows에서는 ctrl-shift-v로 마크다운 파일을 미리보기 할 수 있습니다.   
-
+  
 **4.주요 MCP서버 연결**     
 
 **주요 MCP 이해 및 준비 작업**        
