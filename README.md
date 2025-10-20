@@ -82,38 +82,42 @@
 **1.Node,Git,bun,AI툴(Claude Code 또는 Claude Desktop 또는 Cursor) 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#%EC%82%AC%EC%A0%84%EC%9E%91%EC%97%85
 
-**2.Microsoft Visual Studio Code 설치**   
+**2.Microsoft Visual Studio Code 설치(Cursor 사용시에는 불필요)**   
 작업결과를 편집하기 위한 용도로 사용합니다.         
 https://code.visualstudio.com/ 에 접근하여 설치파일 다운로드하여 설치   
 
-Markdown Preview Enhanced 플러그인 설치   
-![](images/2025-09-17-22-12-36.png) 
+**3.Markdown Preview Enhanced 플러그인 설치**   
+vscode는 좌측 Extentions탭을 누르고 'markdown'으로 검색 후 'Markdown Preview Enhanced'설치  
+![](images/2025-10-20-23-19-54.png)
+
+Cursor에서는 Extenstions를 클릭하고 'markdown'으로 검색 후 'Markdown Preview Enhanced'설치  
+![](images/2025-10-20-23-21-03.png)  
 
 맥에서는 cmd-shift-v, Windows에서는 ctrl-shift-v로 마크다운 파일을 미리보기 할 수 있습니다.   
 
-**3.주요 MCP서버 연결**     
+**4.주요 MCP서버 연결**     
 
 **주요 MCP 이해 및 준비 작업**        
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#%EC%A3%BC%EC%9A%94-mcp-%EC%9D%B4%ED%95%B4-%EB%B0%8F-%EC%A4%80%EB%B9%84-%EC%9E%91%EC%97%85
 
 사용할 **AI툴에 맞게 MCP서버 연결**을 하세요.   
 
-**3.1 Claude Desktop**     
+**4.1 Claude Desktop**     
    
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#claude-desktop%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
 
-**3.2 Claude Code**       
+**4.2 Claude Code**       
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#claude-code%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
 
-**3.3 Cursor**     
+**4.3 Cursor**     
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#cursor%EC%97%90-%EC%A3%BC%EC%9A%94-mcp%EC%84%9C%EB%B2%84-%EC%97%B0%EA%B2%B0
 
 ---
 
-**4.Figma MCP 설치**      
+**5.Figma MCP 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#figma-mcp-%EC%84%A4%EC%B9%98
 
-**5.프로젝트 디렉토리 생성**     
+**6.프로젝트 디렉토리 생성**     
 각 작업결과를 생성할 프로젝트 디렉토리를 생성합니다.     
 Mac 사용자는 기본 터미널에서 수행하고 Window 사용자는 Git Bash 터미널에서 수행합니다.    
 '{프로젝트}'는 MVP주제에 적절한 영문으로 지정합니다.    
@@ -137,7 +141,7 @@ cd ~/home/workspace/lifesub
 code .
 ```
 
-**6.가이드 다운로드**    
+**7.참고자료 다운로드**    
 1)기획 가이드를 PC에 다운로드 합니다.         
 Mac 사용자는 기본 터미널에서 수행하고 Window 사용자는 Git Bash 터미널에서 수행합니다.  
 ```
@@ -158,7 +162,7 @@ cp aiguide/reference/* ~/home/workspace/${PROJECT}/reference/
 vscode에서 reference디렉토리 밑에 파일이 복사되었는지 확인합니다.    
   
 
-**7.Git 레포지토리 생성 및 푸시**   
+**8.Git 레포지토리 생성 및 푸시**   
 Git 레포지토리를 생성하여 중간 중간 원격 레포지토리에 푸시합니다.    
 서버에 작업결과를 저장하여 다른 사람과 쉽게 공유하기 위해 필요합니다.     
 
@@ -441,7 +445,7 @@ Tip) 각 대화창의 이름을 한글로 바꾸면 나중에 찾기 쉽습니�
 2)Claude Code 또는 Cursor 사용 시 
 이후 작업은 Claude Code 또는 Cursor 프롬프트 창에서 수행합니다.    
 Claude Code 사용 시 각 작업 완료 후 '/clear'명령으로 이전 대화를 초기화하는게 토큰을 절약하는데 좋습니다.   
-  
+
 ### 고객경험 단계 정의
 - 프롬프팅:    
   ```
