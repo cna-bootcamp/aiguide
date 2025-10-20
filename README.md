@@ -20,8 +20,8 @@
   - [대상고객유형 정의](#대상고객유형-정의)
   - [사전준비](#사전준비)
   - [생성형AI 설정](#생성형ai-설정)
-    - [Claude Desktop 설정](#claude-desktop-설정)
-    - [Claude Code와 Cursor 설정](#claude-code와-cursor-설정)
+    - [Claude Desktop 설정(Claude Desktop 이용시)](#claude-desktop-설정claude-desktop-이용시)
+    - [Claude Code와 Cursor 설정(Claude Code 또는 Cursor 사용 시)](#claude-code와-cursor-설정claude-code-또는-cursor-사용-시)
     - [ChatGPT](#chatgpt)
     - [프롬프팅 기본 구성](#프롬프팅-기본-구성)
   - [문제정의](#문제정의)
@@ -171,7 +171,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
 
 ## 생성형AI 설정
 
-### Claude Desktop 설정 
+### Claude Desktop 설정(Claude Desktop 이용시) 
 - Claude Desktop을 실행합니다.   
 
 - Project 생성 
@@ -280,7 +280,7 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
 
 ---
 
-### Claude Code와 Cursor 설정 
+### Claude Code와 Cursor 설정(Claude Code 또는 Cursor 사용 시) 
 
 - Claude Code 또는 Cursor를 실행합니다.   
   사용할 툴을 실행합니다.   
@@ -334,6 +334,8 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-gui
     - 국제 애자일 연합회 인증 트레이너
   ```
 - CLAUDE.md 파일 생성 후 목표, 팀 행동원칙, 팀원, 대화 가이드, 최적안 도출 가이드 등 AI와의 협업에 필요한 지침 설정   
+  
+  Cursor도 지침 파일로 CLAUDE.md 사용합니다.   
   '[멤버]'는 Claude가 제시한 멤버를 적절하게 수정하여 붙여넣기   
  
   예시)  
