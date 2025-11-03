@@ -1473,6 +1473,13 @@ Figma MCP를 이용하여 피그마에 접근하여 유저스토리 초안을 �
 
 ---
 
+- 프로토타입 체크   
+  아래와 같이 디버깅 창의 콘솔을 띄워 놓고 에러가 없는지 봅니다.    
+  에러가 있으면 콘솔 에러를 복사하여 수정 요청합니다.    
+  ![](images/2025-11-03-20-14-32.png)     
+  
+
+
 ## 부록: 생성형AI의 산업분야/조직별 활용방안  
 
 https://github.com/cna-bootcamp/aiguide/blob/main/genai-usecase.md
