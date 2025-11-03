@@ -109,8 +109,9 @@ https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4
 
 ---
 
-**5.Figma MCP 설치**      
+**5.Figma MCP Proxy 설치**      
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/MCP%EC%84%A4%EC%B9%98%EA%B5%AC%EC%84%B1.md#figma-mcp-%EC%84%A4%EC%B9%98
+  
 
 **6.프로젝트 디렉토리 생성**     
 각 작업결과를 생성할 프로젝트 디렉토리를 생성합니다.     
@@ -162,6 +163,13 @@ Git 레포지토리를 생성하여 중간 중간 원격 레포지토리에 푸�
 서버에 작업결과를 저장하여 다른 사람과 쉽게 공유하기 위해 필요합니다.     
 
 https://github.com/cna-bootcamp/clauding-guide/blob/main/references/git-repo-guide.md
+
+
+**9.Window Terminal 설치(Window Only)**     
+Window 사용자는 필수는 아니나 Window Terminal을 설치하는게 좋습니다.     
+Terminal에서 쉽게 작업하기 위함입니다.     
+
+https://github.com/cna-bootcamp/clauding-guide/blob/main/guides/setup/00.prepare1.md#window-terminal-%EC%84%A4%EC%B9%98windows-only
 
 
 | [Top](#목차) |
