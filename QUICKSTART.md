@@ -2,11 +2,37 @@
 
 ## 5분 안에 시작하기
 
+### 0단계: Python 설치 확인 (선택사항)
+
+```bash
+# Python 버전 확인 (3.8 이상 필요)
+python --version
+```
+
+Python이 설치되지 않은 경우:
+- **Windows**: [python.org](https://www.python.org/downloads/)에서 다운로드 및 설치
+  - ⚠️ 설치 시 "Add Python to PATH" 옵션 반드시 체크
+- **macOS**: `brew install python3` 또는 [python.org](https://www.python.org/downloads/)
+- **Linux**: `sudo apt install python3 python3-pip` (Ubuntu/Debian)
+
 ### 1단계: 설치 (1분)
 
 ```bash
 # 의존성 설치
 pip install anthropic python-dotenv pyyaml pydantic aiohttp
+```
+
+**Windows Git Bash 사용자**인 경우 위 명령어가 작동하지 않으면:
+
+```bash
+# 방법 1: python -m pip 사용 (권장)
+python -m pip install anthropic python-dotenv pyyaml pydantic aiohttp
+
+# 방법 2: py 런처 사용
+py -m pip install anthropic python-dotenv pyyaml pydantic aiohttp
+
+# 방법 3: requirements.txt 사용
+python -m pip install -r requirements.txt
 ```
 
 ### 2단계: API Key 설정 (1분)
@@ -122,6 +148,37 @@ VSCode나 Cursor에서:
 
 ## 🔧 문제 해결
 
+### pip: command not found 오류 (Windows Git Bash)
+
+```
+bash: pip: command not found
+```
+
+**원인**: Git Bash가 Python의 pip을 찾지 못함
+
+**해결 방법**:
+
+```bash
+# 1. Python이 설치되었는지 확인
+python --version
+
+# Python이 설치되지 않았다면 python.org에서 설치 (PATH 옵션 체크!)
+
+# 2. python -m pip 사용 (권장)
+python -m pip install -r requirements.txt
+
+# 3. 또는 py 런처 사용
+py -m pip install -r requirements.txt
+
+# 4. Git Bash 대신 PowerShell이나 CMD 사용
+# PowerShell에서: pip install -r requirements.txt
+```
+
+**영구 해결**:
+1. Windows 환경변수에 Python Scripts 폴더 추가
+   - `C:\Users\사용자명\AppData\Local\Programs\Python\Python3XX\Scripts`
+2. Git Bash 재시작
+
 ### API Key 오류
 
 ```
@@ -137,7 +194,7 @@ VSCode나 Cursor에서:
 python --version
 
 # 의존성 재설치
-pip install -r requirements.txt --force-reinstall
+python -m pip install -r requirements.txt --force-reinstall
 ```
 
 ## 💡 다음 단계
