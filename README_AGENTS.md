@@ -29,15 +29,17 @@
 │ 주제/고객    │ │ 문제발견  │ │ 솔루션탐색  │
 │              │ │           │ │             │
 │ • MVP Agent  │ │ • Market  │ │ • Ideation │
-│ • Customer   │ │ • Journey │ │ • Selection│
+│ • Customer   │ │ • CX      │ │ • Selection│
+│              │ │ • Journey │ │            │
 └──────────────┘ └───────────┘ └─────────────┘
 
 ┌──────────────┐ ┌───────────┐ ┌─────────────┐
 │ Stage 4      │ │ Stage 5   │ │ Stage 6     │
 │ 비즈니스     │ │ 제품설계  │ │ 프로토타입  │
 │              │ │           │ │             │
-│ • Business   │ │ • Stories │ │ • Prototype│
-│   Model      │ │ • UI/UX   │ │             │
+│ • Business   │ │ • Event   │ │ • Prototype│
+│   Model      │ │ • Stories │ │             │
+│              │ │ • UI/UX   │ │             │
 └──────────────┘ └───────────┘ └─────────────┘
 
                         │
@@ -57,6 +59,7 @@
 
 2. **Stage 2: 문제 발견**
    - 시장 조사
+   - 고객 경험 조사 (인터뷰/관찰/체험)
    - User Journey Map
    - 문제 가설 정의
 
@@ -69,6 +72,7 @@
    - 수익 모델 설계
 
 5. **Stage 5: 제품 설계**
+   - 이벤트 스토밍 (시퀀스 다이어그램)
    - 유저스토리 작성 (INVEST)
    - UI/UX 설계서
 
@@ -116,7 +120,21 @@
 - SWOT 분석
 - 시장 진입 전략
 
-### 4. Journey Map Agent (고객 여정 지도)
+### 4. Customer Experience Agent (고객 경험 조사)
+**역할**: 고객 인터뷰, 관찰, 체험을 통해 실제 고객 경험 데이터를 수집합니다.
+
+**입력**:
+- MVP 주제
+- 대상 고객
+- 시장 조사 결과
+
+**출력**:
+- 고객 인터뷰 결과 (질문/응답, 인사이트)
+- 고객 관찰 결과 (행동 패턴, Pain Points)
+- 고객 체험 결과 (만족도, 사용 후기)
+- 종합 인사이트 및 개선 기회 영역
+
+### 5. Journey Map Agent (고객 여정 지도)
 **역할**: 고객의 전체 여정을 시각화하고 분석합니다.
 
 **입력**:
@@ -147,7 +165,7 @@
 - 검증 가능한 가설 진술
 - 검증 계획
 
-### 6. Ideation Agent (아이디어 생성)
+### 7. Ideation Agent (아이디어 생성)
 **역할**: 문제 해결을 위한 창의적인 아이디어를 생성합니다.
 
 **입력**:
@@ -161,7 +179,7 @@
 - 아이디어 조합
 - 초기 필터링 기준
 
-### 7. Solution Selection Agent (솔루션 선정)
+### 8. Solution Selection Agent (솔루션 선정)
 **역할**: 아이디어를 체계적으로 평가하고 최적의 솔루션을 선정합니다.
 
 **입력**:
@@ -177,7 +195,7 @@
 - MVP 로드맵
 - 성공 지표 (KPI)
 
-### 8. Business Model Agent (비즈니스 모델)
+### 9. Business Model Agent (비즈니스 모델)
 **역할**: Lean Canvas 기반 비즈니스 모델을 설계합니다.
 
 **입력**:
@@ -192,12 +210,29 @@
 - Go-to-Market 전략
 - 재무 계획 (3년)
 
-### 9. User Story Agent (유저스토리)
+### 10. Event Storming Agent (이벤트 스토밍)
+**역할**: 이벤트 스토밍 기법을 활용하여 시스템의 이벤트 흐름과 시퀀스 다이어그램을 작성합니다.
+
+**입력**:
+- 선정된 솔루션
+- 대상 고객
+- Journey Map
+- 비즈니스 모델
+
+**출력**:
+- 도메인 이벤트 식별
+- 커맨드 및 애그리게이트 정의
+- 시퀀스 다이어그램 (Mermaid 형식)
+- 바운디드 컨텍스트
+- User Story 작성을 위한 권장사항
+
+### 11. User Story Agent (유저스토리)
 **역할**: 사용자 관점의 요구사항을 체계적으로 작성합니다.
 
 **입력**:
 - 선정된 솔루션
 - 대상 고객
+- 이벤트 스토밍 결과
 
 **출력**:
 - Epic 별 분류
@@ -208,7 +243,7 @@
 - Non-Functional Requirements
 - Definition of Done
 
-### 10. UI/UX Agent (UI/UX 설계)
+### 12. UI/UX Agent (UI/UX 설계)
 **역할**: 사용자 경험과 인터페이스를 설계합니다.
 
 **입력**:
@@ -225,7 +260,7 @@
 - 반응형 디자인
 - 접근성 가이드
 
-### 11. Prototype Agent (프로토타입)
+### 13. Prototype Agent (프로토타입)
 **역할**: 프로토타입 개발 계획과 구현 가이드를 제공합니다.
 
 **입력**:
@@ -341,11 +376,13 @@ aiguide/
 │   ├── mvp_agent.py            # MVP 주제 정의
 │   ├── customer_agent.py       # 대상 고객 정의
 │   ├── market_research_agent.py # 시장 조사
+│   ├── customer_experience_agent.py # 고객 경험 조사
 │   ├── journey_map_agent.py    # User Journey Map
 │   ├── problem_hypothesis_agent.py # 문제 가설
 │   ├── ideation_agent.py       # 아이디어 생성
 │   ├── solution_selection_agent.py # 솔루션 선정
 │   ├── business_model_agent.py # 비즈니스 모델
+│   ├── event_storming_agent.py # 이벤트 스토밍
 │   ├── user_story_agent.py     # 유저스토리
 │   ├── uiux_agent.py           # UI/UX 설계
 │   └── prototype_agent.py      # 프로토타입
@@ -364,14 +401,16 @@ aiguide/
 │       ├── 01_mvp_topic.md
 │       ├── 02_target_customer.md
 │       ├── 03_market_research.md
-│       ├── 04_journey_map.md
-│       ├── 05_problem_hypothesis.md
-│       ├── 06_ideation.md
-│       ├── 07_solution_selection.md
-│       ├── 08_business_model.md
-│       ├── 09_user_stories.md
-│       ├── 10_uiux_design.md
-│       ├── 11_prototype_guide.md
+│       ├── 04_customer_experience.md
+│       ├── 05_journey_map.md
+│       ├── 06_problem_hypothesis.md
+│       ├── 07_ideation.md
+│       ├── 08_solution_selection.md
+│       ├── 09_business_model.md
+│       ├── 10_event_storming.md
+│       ├── 11_user_stories.md
+│       ├── 12_uiux_design.md
+│       ├── 13_prototype_guide.md
 │       └── [project_name]_state.json
 │
 ├── examples/                    # 예제 출력물
@@ -395,14 +434,16 @@ aiguide/
 | `01_mvp_topic.md` | MVP 주제 정의서 | MVP Agent |
 | `02_target_customer.md` | 대상 고객 정의서 | Customer Agent |
 | `03_market_research.md` | 시장 조사 보고서 | Market Research Agent |
-| `04_journey_map.md` | User Journey Map | Journey Map Agent |
-| `05_problem_hypothesis.md` | 문제 가설 정의서 | Problem Hypothesis Agent |
-| `06_ideation.md` | 아이디어 목록 | Ideation Agent |
-| `07_solution_selection.md` | 솔루션 평가 및 선정서 | Solution Selection Agent |
-| `08_business_model.md` | 비즈니스 모델 (Lean Canvas) | Business Model Agent |
-| `09_user_stories.md` | 유저스토리 | User Story Agent |
-| `10_uiux_design.md` | UI/UX 설계서 | UI/UX Agent |
-| `11_prototype_guide.md` | 프로토타입 개발 가이드 | Prototype Agent |
+| `04_customer_experience.md` | 고객 경험 조사 보고서 | Customer Experience Agent |
+| `05_journey_map.md` | User Journey Map | Journey Map Agent |
+| `06_problem_hypothesis.md` | 문제 가설 정의서 | Problem Hypothesis Agent |
+| `07_ideation.md` | 아이디어 목록 | Ideation Agent |
+| `08_solution_selection.md` | 솔루션 평가 및 선정서 | Solution Selection Agent |
+| `09_business_model.md` | 비즈니스 모델 (Lean Canvas) | Business Model Agent |
+| `10_event_storming.md` | 이벤트 스토밍 및 시퀀스 다이어그램 | Event Storming Agent |
+| `11_user_stories.md` | 유저스토리 | User Story Agent |
+| `12_uiux_design.md` | UI/UX 설계서 | UI/UX Agent |
+| `13_prototype_guide.md` | 프로토타입 개발 가이드 | Prototype Agent |
 | `{project}_state.json` | 전체 상태 (JSON) | Orchestrator |
 
 ### 상태 파일 (state.json)

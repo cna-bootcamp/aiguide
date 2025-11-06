@@ -51,14 +51,16 @@ async def run_full_planning(project_name: str, user_input: Optional[str] = None)
         print(f"    ├── 01_mvp_topic.md")
         print(f"    ├── 02_target_customer.md")
         print(f"    ├── 03_market_research.md")
-        print(f"    ├── 04_journey_map.md")
-        print(f"    ├── 05_problem_hypothesis.md")
-        print(f"    ├── 06_ideation.md")
-        print(f"    ├── 07_solution_selection.md")
-        print(f"    ├── 08_business_model.md")
-        print(f"    ├── 09_user_stories.md")
-        print(f"    ├── 10_uiux_design.md")
-        print(f"    ├── 11_prototype_guide.md")
+        print(f"    ├── 04_customer_experience.md")
+        print(f"    ├── 05_journey_map.md")
+        print(f"    ├── 06_problem_hypothesis.md")
+        print(f"    ├── 07_ideation.md")
+        print(f"    ├── 08_solution_selection.md")
+        print(f"    ├── 09_business_model.md")
+        print(f"    ├── 10_event_storming.md")
+        print(f"    ├── 11_user_stories.md")
+        print(f"    ├── 12_uiux_design.md")
+        print(f"    ├── 13_prototype_guide.md")
         print(f"    └── {project_name}_state.json")
         print("="*60 + "\n")
     else:
@@ -103,11 +105,13 @@ def list_agents():
         "mvp": "MVP 주제 정의",
         "customer": "대상 고객 정의 (JTBD)",
         "market_research": "시장 조사",
+        "customer_experience": "고객 경험 조사 (인터뷰/관찰/체험)",
         "journey_map": "User Journey Map 작성",
         "problem_hypothesis": "문제 가설 정의",
         "ideation": "아이디어 생성",
         "solution_selection": "솔루션 평가 및 선정",
         "business_model": "비즈니스 모델 기획 (Lean Canvas)",
+        "event_storming": "이벤트 스토밍 및 시퀀스 다이어그램",
         "user_story": "유저스토리 작성",
         "uiux": "UI/UX 설계서 작성",
         "prototype": "프로토타입 개발 가이드"
