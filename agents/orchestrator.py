@@ -10,11 +10,13 @@ from shared.utils import save_to_file, create_markdown_report
 from .mvp_agent import MVPAgent
 from .customer_agent import CustomerAgent
 from .market_research_agent import MarketResearchAgent
+from .customer_experience_agent import CustomerExperienceAgent
 from .journey_map_agent import JourneyMapAgent
 from .problem_hypothesis_agent import ProblemHypothesisAgent
 from .ideation_agent import IdeationAgent
 from .solution_selection_agent import SolutionSelectionAgent
 from .business_model_agent import BusinessModelAgent
+from .event_storming_agent import EventStormingAgent
 from .user_story_agent import UserStoryAgent
 from .uiux_agent import UIUXAgent
 from .prototype_agent import PrototypeAgent
@@ -34,11 +36,13 @@ class PlanningOrchestrator:
             "mvp": MVPAgent(),
             "customer": CustomerAgent(),
             "market_research": MarketResearchAgent(),
+            "customer_experience": CustomerExperienceAgent(),
             "journey_map": JourneyMapAgent(),
             "problem_hypothesis": ProblemHypothesisAgent(),
             "ideation": IdeationAgent(),
             "solution_selection": SolutionSelectionAgent(),
             "business_model": BusinessModelAgent(),
+            "event_storming": EventStormingAgent(),
             "user_story": UserStoryAgent(),
             "uiux": UIUXAgent(),
             "prototype": PrototypeAgent(),
@@ -53,8 +57,8 @@ class PlanningOrchestrator:
             },
             {
                 "stage": "2. 문제 발견",
-                "agents": ["market_research", "journey_map", "problem_hypothesis"],
-                "description": "시장 조사, 고객 여정 분석, 문제 가설을 정의합니다."
+                "agents": ["market_research", "customer_experience", "journey_map", "problem_hypothesis"],
+                "description": "시장 조사, 고객 경험 조사, 고객 여정 분석, 문제 가설을 정의합니다."
             },
             {
                 "stage": "3. 솔루션 탐색",
@@ -68,8 +72,8 @@ class PlanningOrchestrator:
             },
             {
                 "stage": "5. 제품 설계",
-                "agents": ["user_story", "uiux"],
-                "description": "유저스토리와 UI/UX를 설계합니다."
+                "agents": ["event_storming", "user_story", "uiux"],
+                "description": "이벤트 스토밍, 유저스토리, UI/UX를 설계합니다."
             },
             {
                 "stage": "6. 프로토타입",
@@ -138,12 +142,21 @@ class PlanningOrchestrator:
                 results["market_research"] = market_result
                 print("✅ 시장 조사 완료")
 
+            # Customer Experience Agent
+            experience_result = await self.run_agent("customer_experience",
+                                                     self.state.get_context_for_agent("customer_experience"))
+            if experience_result["success"]:
+                self.state.update("customer_experience", experience_result["content"])
+                self.save_result("04_customer_experience.md", experience_result["content"])
+                results["customer_experience"] = experience_result
+                print("✅ 고객 경험 조사 완료")
+
             # Journey Map Agent
             journey_result = await self.run_agent("journey_map",
                                                   self.state.get_context_for_agent("journey_map"))
             if journey_result["success"]:
                 self.state.update("journey_map", journey_result["content"])
-                self.save_result("04_journey_map.md", journey_result["content"])
+                self.save_result("05_journey_map.md", journey_result["content"])
                 results["journey_map"] = journey_result
                 print("✅ User Journey Map 작성 완료")
 
@@ -152,7 +165,7 @@ class PlanningOrchestrator:
                                                   self.state.get_context_for_agent("problem_hypothesis"))
             if problem_result["success"]:
                 self.state.update("problem_hypothesis", problem_result["content"])
-                self.save_result("05_problem_hypothesis.md", problem_result["content"])
+                self.save_result("06_problem_hypothesis.md", problem_result["content"])
                 results["problem_hypothesis"] = problem_result
                 print("✅ 문제 가설 정의 완료")
 
@@ -166,7 +179,7 @@ class PlanningOrchestrator:
                                                    self.state.get_context_for_agent("ideation"))
             if ideation_result["success"]:
                 self.state.update("ideation_results", ideation_result["content"])
-                self.save_result("06_ideation.md", ideation_result["content"])
+                self.save_result("07_ideation.md", ideation_result["content"])
                 results["ideation"] = ideation_result
                 print("✅ 아이디에이션 완료")
 
@@ -175,7 +188,7 @@ class PlanningOrchestrator:
                                                     self.state.get_context_for_agent("solution_selection"))
             if selection_result["success"]:
                 self.state.update("selected_solution", selection_result["content"])
-                self.save_result("07_solution_selection.md", selection_result["content"])
+                self.save_result("08_solution_selection.md", selection_result["content"])
                 results["solution_selection"] = selection_result
                 print("✅ 솔루션 선정 완료")
 
@@ -188,7 +201,7 @@ class PlanningOrchestrator:
                                                    self.state.get_context_for_agent("business_model"))
             if business_result["success"]:
                 self.state.update("business_model", business_result["content"])
-                self.save_result("08_business_model.md", business_result["content"])
+                self.save_result("09_business_model.md", business_result["content"])
                 results["business_model"] = business_result
                 print("✅ 비즈니스 모델 기획 완료")
 
@@ -197,12 +210,21 @@ class PlanningOrchestrator:
             print(f"🎨 Stage 5: 제품 설계")
             print(f"{'='*60}\n")
 
+            # Event Storming Agent
+            event_result = await self.run_agent("event_storming",
+                                                self.state.get_context_for_agent("event_storming"))
+            if event_result["success"]:
+                self.state.update("event_storming", event_result["content"])
+                self.save_result("10_event_storming.md", event_result["content"])
+                results["event_storming"] = event_result
+                print("✅ 이벤트 스토밍 완료")
+
             # User Story Agent
             story_result = await self.run_agent("user_story",
                                                 self.state.get_context_for_agent("user_story"))
             if story_result["success"]:
                 self.state.update("user_stories", story_result["content"])
-                self.save_result("09_user_stories.md", story_result["content"])
+                self.save_result("11_user_stories.md", story_result["content"])
                 results["user_stories"] = story_result
                 print("✅ 유저스토리 작성 완료")
 
@@ -211,7 +233,7 @@ class PlanningOrchestrator:
                                                self.state.get_context_for_agent("uiux"))
             if uiux_result["success"]:
                 self.state.update("uiux_design", uiux_result["content"])
-                self.save_result("10_uiux_design.md", uiux_result["content"])
+                self.save_result("12_uiux_design.md", uiux_result["content"])
                 results["uiux"] = uiux_result
                 print("✅ UI/UX 설계 완료")
 
@@ -224,7 +246,7 @@ class PlanningOrchestrator:
                                                     self.state.get_context_for_agent("prototype"))
             if prototype_result["success"]:
                 self.state.update("prototype", prototype_result["content"])
-                self.save_result("11_prototype_guide.md", prototype_result["content"])
+                self.save_result("13_prototype_guide.md", prototype_result["content"])
                 results["prototype"] = prototype_result
                 print("✅ 프로토타입 가이드 생성 완료")
 

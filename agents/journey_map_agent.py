@@ -18,8 +18,7 @@ class JourneyMapAgent(BaseAgent):
     def get_prompt_template(self, context: Dict[str, Any]) -> str:
         mvp_topic = context.get("mvp_topic", "")
         target_customer = context.get("target_customer", "")
-        interview_results = context.get("interview_results", "")
-        observation_results = context.get("observation_results", "")
+        customer_experience = context.get("customer_experience", "")
 
         return f"""당신은 UX 디자인 전문가입니다.
 고객의 여정을 시각화하고 분석하는 User Journey Map을 작성해주세요.
@@ -27,11 +26,13 @@ class JourneyMapAgent(BaseAgent):
 MVP 주제: {mvp_topic}
 대상 고객: {target_customer}
 
-인터뷰 결과:
-{interview_results if interview_results else "인터뷰 데이터 없음"}
+고객 경험 조사 결과 (인터뷰, 관찰, 체험):
+{customer_experience if customer_experience else "고객 경험 데이터 없음"}
 
-관찰 결과:
-{observation_results if observation_results else "관찰 데이터 없음"}
+**중요**: 고객 경험 조사 결과에서 다음 항목들을 적극 활용하세요:
+- 인터뷰에서 발견된 Pain Points와 Needs
+- 관찰에서 파악된 행동 패턴
+- 체험에서 경험한 실제 고객 감정과 만족도
 
 다음 형식으로 User Journey Map을 작성해주세요:
 
@@ -95,8 +96,7 @@ MVP 주제: {mvp_topic}
             result = self.format_output(
                 content=response,
                 metadata={
-                    "has_interview_data": bool(context.get("interview_results")),
-                    "has_observation_data": bool(context.get("observation_results")),
+                    "has_customer_experience": bool(context.get("customer_experience")),
                     "journey_type": "end_to_end"
                 }
             )

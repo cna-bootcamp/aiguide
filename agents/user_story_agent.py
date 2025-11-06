@@ -18,15 +18,25 @@ class UserStoryAgent(BaseAgent):
     def get_prompt_template(self, context: Dict[str, Any]) -> str:
         selected_solution = context.get("selected_solution", "")
         target_customer = context.get("target_customer", "")
+        event_storming = context.get("event_storming", "")
 
         return f"""당신은 제품 관리 전문가입니다.
-선정된 솔루션을 기반으로 체계적인 유저스토리를 작성해주세요.
+선정된 솔루션과 이벤트 스토밍 결과를 기반으로 체계적인 유저스토리를 작성해주세요.
 
 선정된 솔루션:
 {selected_solution if selected_solution else "솔루션 정보 없음"}
 
 대상 고객:
 {target_customer if target_customer else "고객 정보 없음"}
+
+이벤트 스토밍 결과:
+{event_storming if event_storming else "이벤트 스토밍 정보 없음"}
+
+**중요**: 이벤트 스토밍 결과의 다음 항목들을 적극 활용하세요:
+- 바운디드 컨텍스트를 Epic으로 활용
+- 도메인 이벤트와 커맨드를 User Story로 변환
+- 시퀀스 다이어그램의 흐름을 Acceptance Criteria에 반영
+- 애그리게이트를 User Role로 고려
 
 다음 형식으로 유저스토리를 작성해주세요:
 
@@ -168,7 +178,7 @@ Epic 3: 부가 기능
     async def execute(self, context: Dict[str, Any]) -> Dict[str, Any]:
         """유저스토리 작성 실행"""
         try:
-            if not self.validate_context(context, ["selected_solution", "target_customer"]):
+            if not self.validate_context(context, ["selected_solution"]):
                 return self.format_error("Missing required context")
 
             if not await self.pre_execute(context):
