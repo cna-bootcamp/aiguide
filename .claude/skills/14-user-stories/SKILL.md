@@ -22,77 +22,127 @@ description: 사용자 관점에서 제품 요구사항을 정의할 때 INVEST 
 - Event Storming 결과 (event-storming 결과):
   - `think/es/userflow.puml`
   - `think/es/{순번}-{유저플로우명}.puml`
+- 유저스토리 샘플 참고: `reference/sample_유저스토리.md`
 
 ## 유저스토리 프레임워크
 
-### 1. Epic (상위 그룹)
+### 1. 마이크로서비스 기반 구조
 
-각 Epic에 대해:
+유저스토리는 마이크로서비스 단위로 구성합니다:
 
-#### Epic [N]: [Epic 명칭]
-**목표**: [이 Epic이 달성하고자 하는 목표]
+#### 서비스 조직 예시
+- **User Service**: 사용자 관리 (회원가입, 로그인, 프로필)
+- **[Core] Service**: 핵심 비즈니스 기능
+- **[AI] Service**: AI 기반 기능
+- **[Integration] Service**: 외부 연동 기능
 
-##### User Story [N].[M]: [스토리 제목]
-**As a** [사용자 역할],
-**I want** [원하는 기능],
-**So that** [목적/가치].
+### 2. UFR (User Functional Requirement) 포맷
 
-**Acceptance Criteria** (완료 조건):
-- [ ] Given [전제조건], When [행동], Then [결과]
-- [ ] Given [전제조건], When [행동], Then [결과]
-- [ ] Given [전제조건], When [행동], Then [결과]
+각 유저스토리는 다음 형식을 따릅니다:
 
-**우선순위**: 높음 / 중간 / 낮음
-**Story Points**: [1, 2, 3, 5, 8, 13]
-**의존성**: [다른 스토리 ID]
+#### UFR-{서비스}-{번호}: [{기능}] 사용자로서 | 나는 {목적}을 위해 | {액션}을 하고 싶다.
 
-### 2. 사용자 역할
+**예시**:
+- `UFR-USER-010: [회원가입] 사용자로서 | 나는 서비스를 이용하기 위해 | 간편하게 회원가입하고 싶다.`
+- `UFR-CORE-020: [주문하기] 사용자로서 | 나는 상품을 구매하기 위해 | 쉽게 주문하고 싶다.`
+
+### 3. 시나리오 기반 상세 요구사항
+
+각 UFR은 다음 구조로 상세화합니다:
+
+#### - 시나리오: {시나리오명}
+{상황 설명} | {조건} | {결과}
+
+**[입력 요구사항]**
+- 기본 정보
+  - {필드명}: {검증 조건}
+  - {필드명}: {검증 조건}
+- 추가 정보
+  - {필드명}: {검증 조건}
+
+**[검증 요구사항]**
+- {검증 항목}: {검증 내용}
+- {검증 항목}: {검증 내용}
+
+**[처리 결과]**
+- 성공 시
+  - {결과 항목}
+  - {결과 항목}
+- 실패 시
+  - {실패 조건}: {처리 방법}
+
+#### - M/{포인트}, S/{포인트}, C/{포인트}
+
+**우선순위 표기법**:
+- **M** (Must Have): 필수 구현 기능
+- **S** (Should Have): 중요 구현 기능
+- **C** (Could Have): 선택 구현 기능
+- **숫자**: Story Points (피보나치: 1, 2, 3, 5, 8, 13, 21)
+
+**예시**: `M/13` → Must Have, 13 포인트
+
+### 4. 기술 태스크 (복잡한 스토리)
+
+복잡한 구현이 필요한 스토리는 기술 태스크를 분리합니다:
+
+#### [기술 태스크]
+- **Frontend**
+  - {구현 내용}
+  - {구현 내용}
+- **Backend**
+  - API Endpoint: {엔드포인트}
+  - Service Layer: {서비스 로직}
+  - Repository: {데이터 접근}
+- **Infrastructure**
+  - {인프라 요구사항}
+
+### 5. 사용자 역할
 
 각 역할 정의:
 - **설명**
 - **권한**
 - **목표**
 
-### 3. Feature Story Map
+### 6. Feature Story Map
 
 계층 구조 생성:
 ```
-Epic 1: 사용자 관리
-├── Story 1.1: 회원가입
-├── Story 1.2: 로그인
-└── Story 1.3: 프로필 관리
+User Service
+├── UFR-USER-010: 회원가입
+├── UFR-USER-020: 로그인
+└── UFR-USER-030: 프로필 관리
 
-Epic 2: 핵심 기능
-├── Story 2.1: [기능 1]
-├── Story 2.2: [기능 2]
-└── Story 2.3: [기능 3]
+Core Service
+├── UFR-CORE-010: [기능 1]
+├── UFR-CORE-020: [기능 2]
+└── UFR-CORE-030: [기능 3]
 ```
 
-### 4. 우선순위 매트릭스
+### 7. 우선순위 매트릭스
 
 #### Must Have (P0)
-1. [Story ID] - [스토리 제목]
+1. [UFR-XXX-###] - [스토리 제목]
 
 #### Should Have (P1)
-1. [Story ID] - [스토리 제목]
+1. [UFR-XXX-###] - [스토리 제목]
 
 #### Could Have (P2)
-1. [Story ID] - [스토리 제목]
+1. [UFR-XXX-###] - [스토리 제목]
 
 #### Won't Have (이번 버전에서는)
-1. [Story ID] - [스토리 제목]
+1. [UFR-XXX-###] - [스토리 제목]
 
-### 5. 스프린트 계획 (MVP 기준)
+### 8. 스프린트 계획 (MVP 기준)
 
 #### Sprint 1 (1-2주차)
-- [ ] Story 1.1: [제목] (SP: 5)
-- [ ] Story 1.2: [제목] (SP: 3)
+- [ ] UFR-USER-010: [제목] (M/5)
+- [ ] UFR-CORE-020: [제목] (M/3)
 - **Sprint 목표**: [스프린트 목표]
 - **총 SP**: 8
 
 [이후 스프린트 계속]
 
-### 6. 비기능적 요구사항
+### 9. 비기능적 요구사항
 
 #### 성능
 - 페이지 로드: 3G에서 <3초, WiFi에서 <1초
@@ -114,7 +164,7 @@ Epic 2: 핵심 기능
 - 클라우드 네이티브
 - 마이크로서비스 아키텍처
 
-### 7. Definition of Done
+### 10. Definition of Done
 
 체크리스트:
 - [ ] 코드 리뷰 완료
@@ -125,11 +175,11 @@ Epic 2: 핵심 기능
 - [ ] 스테이징 배포 및 검증
 - [ ] 프로덕션 배포
 
-### 8. 리스크 및 의존성
+### 11. 리스크 및 의존성
 
-| Story ID | 리스크/이슈 | 영향도 | 완화 전략 |
+| UFR ID | 리스크/이슈 | 영향도 | 완화 전략 |
 |----------|-----------|--------|----------|
-| 1.1 | [리스크] | 높음 | [전략] |
+| UFR-XXX-### | [리스크] | 높음 | [전략] |
 
 ## INVEST 원칙
 
@@ -146,24 +196,37 @@ Epic 2: 핵심 기능
 ```markdown
 # 유저스토리
 
-## Epic 1: {Epic 명칭}
+## User Service
 
-**목표**: {이 Epic이 달성하고자 하는 목표}
+### UFR-USER-010: [회원가입] 사용자로서 | 나는 서비스를 이용하기 위해 | 간편하게 회원가입하고 싶다.
 
-### User Story 1.1: {스토리 제목}
+- 시나리오: 신규 회원가입
+  미로그인 상태에서 회원가입 화면에 접근한 상황에서 | 필수 정보를 모두 입력하고 회원가입 버튼을 클릭하면 | 가입이 완료되고 로그인 화면으로 이동한다.
 
-**As a** {사용자 역할},
-**I want** {원하는 기능},
-**So that** {목적/가치}.
+  [입력 요구사항]
+  - 기본 정보
+    - 이름: 2자 이상 (한글/영문)
+    - 이메일: 유효한 이메일 형식
+    - 비밀번호: 8자 이상, 영문+숫자+특수문자
+  - 추가 정보
+    - 닉네임: 2-10자 (선택)
+    - 프로필 이미지: JPG/PNG, 최대 5MB (선택)
 
-**Acceptance Criteria**:
-- [ ] Given {전제조건}, When {행동}, Then {결과}
-- [ ] Given {전제조건}, When {행동}, Then {결과}
-- [ ] Given {전제조건}, When {행동}, Then {결과}
+  [검증 요구사항]
+  - 이메일 중복 확인: 기존 회원과 중복 불가
+  - 비밀번호 강도: 보안 정책 준수
+  - 필수 입력: 이름, 이메일, 비밀번호
 
-**우선순위**: 높음 / 중간 / 낮음
-**Story Points**: {1, 2, 3, 5, 8, 13}
-**의존성**: {다른 스토리 ID}
+  [처리 결과]
+  - 성공 시
+    - 회원 정보 DB 저장
+    - 환영 이메일 발송
+    - 로그인 화면으로 리디렉션
+  - 실패 시
+    - 이메일 중복: "이미 사용 중인 이메일입니다" 메시지
+    - 유효성 오류: 해당 필드에 오류 메시지 표시
+
+- M/13
 
 ---
 
@@ -184,41 +247,41 @@ Epic 2: 핵심 기능
 ## Feature Story Map
 
 \```
-Epic 1: {Epic 명칭}
-├── Story 1.1: {스토리 제목}
-├── Story 1.2: {스토리 제목}
-└── Story 1.3: {스토리 제목}
+User Service
+├── UFR-USER-010: 회원가입
+├── UFR-USER-020: 로그인
+└── UFR-USER-030: 프로필 관리
 
-Epic 2: {Epic 명칭}
-├── Story 2.1: {스토리 제목}
-├── Story 2.2: {스토리 제목}
-└── Story 2.3: {스토리 제목}
+Core Service
+├── UFR-CORE-010: {스토리 제목}
+├── UFR-CORE-020: {스토리 제목}
+└── UFR-CORE-030: {스토리 제목}
 \```
 
 ## 우선순위 매트릭스
 
 ### Must Have (P0) - 필수
-1. Story {ID}: {제목} - {설명}
-2. Story {ID}: {제목} - {설명}
+1. UFR-USER-010: 회원가입 - 서비스 이용을 위한 필수 기능
+2. UFR-CORE-020: {제목} - {설명}
 
 ### Should Have (P1) - 중요
-1. Story {ID}: {제목} - {설명}
-2. Story {ID}: {제목} - {설명}
+1. UFR-USER-030: {제목} - {설명}
+2. UFR-CORE-030: {제목} - {설명}
 
 ### Could Have (P2) - 선택
-1. Story {ID}: {제목} - {설명}
+1. UFR-XXX-###: {제목} - {설명}
 
 ### Won't Have - 향후 고려
-1. Story {ID}: {제목} - {설명}
+1. UFR-XXX-###: {제목} - {설명}
 
 ## 스프린트 계획 (MVP 기준)
 
 ### Sprint 1 (1-2주차)
 **Sprint 목표**: {스프린트의 핵심 목표}
 
-- [ ] Story 1.1: {제목} (SP: 5)
-- [ ] Story 1.2: {제목} (SP: 3)
-- [ ] Story 1.3: {제목} (SP: 2)
+- [ ] UFR-USER-010: 회원가입 (M/5)
+- [ ] UFR-USER-020: 로그인 (M/3)
+- [ ] UFR-CORE-010: {제목} (S/2)
 
 **총 Story Points**: 10
 **예상 완료일**: {날짜}
@@ -226,8 +289,8 @@ Epic 2: {Epic 명칭}
 ### Sprint 2 (3-4주차)
 **Sprint 목표**: {스프린트의 핵심 목표}
 
-- [ ] Story 2.1: {제목} (SP: 8)
-- [ ] Story 2.2: {제목} (SP: 5)
+- [ ] UFR-CORE-020: {제목} (M/8)
+- [ ] UFR-USER-030: {제목} (S/5)
 
 **총 Story Points**: 13
 **예상 완료일**: {날짜}
@@ -292,53 +355,53 @@ Epic 2: {Epic 명칭}
 
 ### 리스크 관리
 
-| Story ID | 리스크/이슈 | 영향도 | 발생 가능성 | 완화 전략 | 담당자 |
+| UFR ID | 리스크/이슈 | 영향도 | 발생 가능성 | 완화 전략 | 담당자 |
 |----------|-----------|--------|-----------|----------|--------|
-| 1.1 | {리스크 설명} | 높음 | 중간 | {완화 전략} | {담당자} |
-| 1.2 | {리스크 설명} | 중간 | 높음 | {완화 전략} | {담당자} |
+| UFR-USER-010 | {리스크 설명} | 높음 | 중간 | {완화 전략} | {담당자} |
+| UFR-CORE-020 | {리스크 설명} | 중간 | 높음 | {완화 전략} | {담당자} |
 
 ### 의존성 관리
 
-| Story ID | 의존하는 스토리 | 의존성 타입 | 해결 방법 |
+| UFR ID | 의존하는 스토리 | 의존성 타입 | 해결 방법 |
 |----------|--------------|-----------|----------|
-| 2.1 | Story 1.1 | 기술적 의존성 | {해결 방법} |
-| 3.2 | Story 2.3 | 비즈니스 의존성 | {해결 방법} |
+| UFR-CORE-020 | UFR-USER-010 | 기술적 의존성 | {해결 방법} |
+| UFR-XXX-### | UFR-CORE-020 | 비즈니스 의존성 | {해결 방법} |
 ```
 
 ## 중요 가이드라인
 
-- Event Storming 결과를 광범위하게 활용
-- Bounded Context를 Epic으로 사용
-- Domain Event와 Command를 User Story로 변환
-- 시퀀스 다이어그램 플로우를 Acceptance Criteria에 반영
-- Aggregate를 User Role로 고려
-- 최소 20개 이상의 유저스토리 작성
-- 각 스토리는 독립적으로 전달 가능해야 함
-- Happy path와 edge case 모두 포함
-- 명확하고 테스트 가능한 인수 기준 정의
-- Event Storming의 Policy/Rule을 Acceptance Criteria로 변환
+- **UFR 포맷 사용**: `UFR-{서비스}-{번호}` 형식으로 모든 스토리 작성
+- **시나리오 기반 작성**: [입력 요구사항], [검증 요구사항], [처리 결과] 구조 필수
+- **우선순위 표기**: M/S/C + Story Points 형식 사용
+- **마이크로서비스 조직**: 서비스별로 스토리 그룹화
+- **Event Storming 활용**: Event Storming 결과를 UFR로 변환
+- **기술 태스크 분리**: 복잡한 스토리는 Frontend/Backend/Infrastructure 태스크 명시
+- **최소 20개 이상**: 충분한 스토리로 MVP 범위 정의
+- **독립성 보장**: 각 UFR은 독립적으로 개발 및 배포 가능
+- **상세한 요구사항**: 입력/검증/처리 결과를 명확히 문서화
+- **샘플 참고**: `reference/sample_유저스토리.md`의 형식 준수
 
 ## Event Storming 매핑 가이드
 
-### Bounded Context → Epic
-- Event Storming의 각 Bounded Context를 Epic으로 변환
-- 예시: "사용자 관리", "주문 처리", "결제 관리"
+### Bounded Context → 마이크로서비스
+- Event Storming의 각 Bounded Context를 마이크로서비스로 변환
+- 예시: "사용자 관리" → User Service, "주문 처리" → Order Service
 
-### User Flow → Epic
-- Event Storming의 User Flow를 Epic으로 변환
-- 예시: "회원가입 플로우", "주문 플로우"
+### User Flow → UFR 그룹
+- Event Storming의 User Flow를 UFR 번호 그룹으로 변환
+- 예시: "회원가입 플로우" → UFR-USER-010~020
 
-### Sequence Diagram → User Story
-- 각 시퀀스 다이어그램을 User Story로 변환
-- 다이어그램의 각 단계가 Acceptance Criteria가 됨
+### Sequence Diagram → UFR 시나리오
+- 각 시퀀스 다이어그램을 UFR의 시나리오로 변환
+- 다이어그램의 각 단계가 [입력/검증/처리 결과]로 구조화됨
 
-### Policy/Rule → Acceptance Criteria
-- Event Storming의 Policy와 Rule을 Acceptance Criteria로 변환
-- 비즈니스 규칙을 명확한 테스트 조건으로 작성
+### Policy/Rule → 검증 요구사항
+- Event Storming의 Policy와 Rule을 [검증 요구사항]으로 변환
+- 비즈니스 규칙을 명확한 검증 조건으로 작성
 
-### Domain Event → User Story
-- 중요한 Domain Event를 User Story로 변환
-- 예시: "주문 완료됨" → "주문 완료 알림 수신"
+### Domain Event → UFR
+- 중요한 Domain Event를 UFR로 변환
+- 예시: "주문 완료됨" → UFR-ORDER-030: 주문 완료 알림 수신
 
 ## 도구 활용
 
@@ -351,14 +414,17 @@ Epic 2: {Epic 명칭}
 
 ## 주의사항
 
-- INVEST 원칙 엄격히 준수
-- 최소 20개 이상 유저스토리
-- Event Storming 결과 적극 활용
-- Acceptance Criteria는 Given-When-Then 형식
-- Story Points는 피보나치 수열 사용
-- 의존성은 명확히 문서화
-- 비기능적 요구사항 필수 포함
-- Definition of Done 모든 항목 충족
+- **UFR 포맷 준수**: `UFR-{서비스}-{번호}` 형식 엄격히 사용
+- **시나리오 구조 필수**: [입력 요구사항], [검증 요구사항], [처리 결과] 모두 작성
+- **우선순위 표기**: M/S/C + Story Points (피보나치) 형식 사용
+- **최소 20개 이상**: 충분한 UFR로 MVP 범위 정의
+- **Event Storming 연계**: ES 결과를 UFR로 체계적 변환
+- **마이크로서비스 구조**: 서비스별로 명확히 그룹화
+- **기술 태스크**: 복잡한 스토리는 Frontend/Backend/Infrastructure 분리
+- **샘플 참조**: `reference/sample_유저스토리.md` 형식 참고
+- **INVEST 원칙**: 독립성, 협상가능성, 가치, 추정가능성, 작은 크기, 테스트가능성
+- **비기능적 요구사항**: 성능, 보안, 사용성, 확장성 필수 포함
+- **Definition of Done**: 모든 완료 기준 충족 필요
 
 ## 다음 단계
 
