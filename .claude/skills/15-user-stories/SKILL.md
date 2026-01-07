@@ -192,7 +192,7 @@ Core Service
 - **T**estable (테스트 가능): 명확한 인수 기준
 
 ## 작성 형식
-
+유저스토리 예시    
 ```markdown
 # 유저스토리
 
