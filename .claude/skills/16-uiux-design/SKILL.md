@@ -320,18 +320,6 @@ XXL: 48px - {사용 예시}
 
 ---
 
-## 디자인 시스템 도구
-
-### 권장 도구
-- **디자인**: Figma, Adobe XD
-- **프로토타이핑**: Figma, InVision, Proto.io
-- **협업**: Zeplin, Abstract
-- **디자인 토큰**: Style Dictionary
-- **컴포넌트 문서화**: Storybook
-```
-
----
-
 ## 결과 파일
 
 - **UI/UX 디자인.md**: `design/uiux/uiux.md`
