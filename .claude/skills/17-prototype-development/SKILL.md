@@ -155,6 +155,9 @@ function navigateTo(screen, data) {
 | 홈 | 검색버튼 | 검색화면 | ✅/❌ |
 | 목록 | 카드클릭 | 상세화면 | ✅/❌ |
 
+### 4. 스타일시트 누락
+html에 사용된 CSS 스타일이 누락되었는지 체크 
+ 
 ---
 
 ## Playwright MCP 테스트
