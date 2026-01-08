@@ -3,7 +3,7 @@ name: event-storming
 description: Event Storming 기법을 사용하여 PlantUML 시퀀스 다이어그램을 작성하고 유저스토리 개발을 준비합니다. 기획 구체화 시 사용하세요.
 ---
 
-# Event Storming - 기획 구체화
+# 이벤트 스토밍으로 기획 구체화
 
 ## 목적
 
@@ -63,8 +63,8 @@ Event Storming은 Alberto Brandolini가 고안한 워크숍 기법으로, 비즈
 
 **파일명**: `think/es/userflow.puml`
 
-**내용**:
-```plantuml
+**내용 예시**:
+```
 @startuml
 !theme mono
 
@@ -100,61 +100,20 @@ rectangle "부가 기능" as sub {
 
 각 유저플로우마다 별도의 PlantUML 파일로 작성합니다.
 
-**파일명 형식**: `think/es/{순번}-{유저플로우명}.puml`
-**예시**: `think/es/01-회원가입.puml`, `think/es/02-로그인.puml`
-
-#### PlantUML 시퀀스 다이어그램 템플릿
-
-```plantuml
-@startuml
-!theme mono
-
-title [유저플로우명]
-
-' 참여자 정의 (Actor, UI, API, Service, External System)
-actor 사용자 as user
-participant "UI\n(화면)" as ui
-participant "API\n(컨트롤러)" as api
-participant "서비스\n(비즈니스 로직)" as service
-participant "데이터베이스" as db
-participant "외부시스템" as external
-
-' 시퀀스 흐름
-user -> ui : [커맨드]\n(필요 데이터)
-activate ui
-
-ui -> api : [API 호출]\n(요청 데이터)
-activate api
-
-' Policy/Rule 표시
-note over api : [Policy/Rule]
-api -> service : [비즈니스 로직 호출]\n(처리 데이터)
-activate service
-
-service -> db : [데이터 저장/조회]
-activate db
-db --> service : 결과
-deactivate db
-
-alt 외부 시스템 호출 필요시
-    service -> external : [외부 API 호출]
-    activate external
-    external --> service : 응답
-    deactivate external
-end
-
-service --> api : [이벤트 발생]\n(이벤트 데이터)
-deactivate service
-
-api --> ui : 처리 결과
-deactivate api
-
-ui --> user : 화면 갱신
-deactivate ui
-
-@enduml
-```
-
+**파일명 형식**: `think/es/{순번}-{유저플로우명}.puml`  
+- **참여자**:  Actor, 마이크로서비스, 외부시스템으로만 구성
+- **외부시스템**:  "(E){외부시스템명}"으로 표시. 예) (E)CRM    
+- (중요) 마이크로서비스 내부와 외부시스템 내부에서 이루어지는 플로우는 표시하지 않음 
+- (중요) 이벤트 스토밍 요소를 명확히 표시: [{이벤트 스토밍 요소}] {내용}
+  - 예1) [이벤트] 차량등록 시작됨
+  - 예2) [커맨드] 차량 등록 버튼 클릭
+  - 예3) [정책/규칙] 가격 100만원 이상 확인
+  - 예4) [데이터] 차량정보
+- **이벤트**: 과거형으로 표현 (예: "회원가입 완료됨", "주문 생성됨")
+- **커맨드**: 명령형으로 표현 (예: "회원가입 요청", "주문 생성")
+- **데이터**: 화살표 라벨에 괄호로 명시 (예: `(이메일, 비밀번호)`)
+- **정책**: `note over` 사용하여 명시
+  
 ### 4. Event Storming 핵심 요소 도출
 
 #### 이벤트 (Events)
@@ -217,141 +176,7 @@ deactivate ui
 - (주문 ID, 상품 목록, 배송지)
 - (결제 금액, 결제 수단)
 
-## PlantUML 시퀀스 다이어그램 상세 예시
-
-### 예시 1: 회원가입 플로우
-
-**파일**: `think/es/01-회원가입.puml`
-
-```plantuml
-@startuml
-!theme mono
-
-title 회원가입 플로우
-
-actor 사용자 as user
-participant "회원가입\n화면" as ui
-participant "회원\nAPI" as api
-participant "회원\n서비스" as service
-participant "회원\nDB" as db
-participant "이메일\n서비스" as email
-
-user -> ui : 회원가입 버튼 클릭
-activate ui
-
-ui -> ui : 입력 폼 표시
-
-user -> ui : 정보 입력\n(이메일, 비밀번호, 이름)
-
-user -> ui : 가입하기 버튼 클릭
-
-ui -> api : POST /api/users/signup\n(이메일, 비밀번호, 이름)
-activate api
-
-note over api : [정책]\n- 이메일 형식 검증\n- 비밀번호 강도 검증
-
-api -> service : registerUser(userData)
-activate service
-
-service -> db : 이메일 중복 확인
-activate db
-db --> service : 중복 여부
-deactivate db
-
-alt 이메일 중복
-    service --> api : 에러: 이메일 중복
-    api --> ui : 400 Bad Request
-    ui --> user : 오류 메시지 표시
-else 중복 없음
-    service -> db : 회원 정보 저장\n(해시된 비밀번호)
-    activate db
-    db --> service : 회원 ID
-    deactivate db
-
-    note over service : [이벤트]\n회원가입 완료됨
-
-    service -> email : 가입 환영 이메일 발송\n(이메일, 이름)
-    activate email
-    email --> service : 발송 완료
-    deactivate email
-
-    service --> api : 회원 정보
-    deactivate service
-
-    api --> ui : 200 OK\n(회원 ID, 토큰)
-    deactivate api
-
-    ui --> user : 가입 완료 화면 표시
-    deactivate ui
-end
-
-@enduml
-```
-
-### 예시 2: 주문 생성 플로우
-
-**파일**: `think/es/04-주문생성.puml`
-
-```plantuml
-@startuml
-!theme mono
-
-title 주문 생성 플로우
-
-actor 사용자 as user
-participant "주문\n화면" as ui
-participant "주문\nAPI" as api
-participant "주문\n서비스" as service
-participant "재고\n서비스" as inventory
-participant "주문\nDB" as db
-
-user -> ui : 상품 선택
-activate ui
-
-user -> ui : 주문하기 클릭\n(상품 ID, 수량, 배송지)
-
-ui -> api : POST /api/orders\n(상품 ID, 수량, 배송지)
-activate api
-
-note over api : [정책]\n- 로그인 사용자 확인\n- 배송지 필수 입력
-
-api -> service : createOrder(orderData)
-activate service
-
-service -> inventory : checkInventory(상품 ID, 수량)
-activate inventory
-inventory --> service : 재고 확인 결과
-deactivate inventory
-
-alt 재고 부족
-    service --> api : 에러: 재고 부족
-    api --> ui : 400 Bad Request
-    ui --> user : 재고 부족 메시지
-else 재고 충분
-    service -> inventory : reserveInventory(상품 ID, 수량)
-    activate inventory
-    inventory --> service : 재고 예약 완료
-    deactivate inventory
-
-    service -> db : 주문 정보 저장
-    activate db
-    db --> service : 주문 ID
-    deactivate db
-
-    note over service : [이벤트]\n주문 생성됨
-
-    service --> api : 주문 정보
-    deactivate service
-
-    api --> ui : 201 Created\n(주문 ID, 주문 번호)
-    deactivate api
-
-    ui --> user : 결제 화면으로 이동
-    deactivate ui
-end
-
-@enduml
-```
+---
 
 ## PlantUML 확인 방법
 
@@ -368,60 +193,23 @@ end
 2. .puml 파일 열기
 3. `Alt + D` (미리보기 창 열기)
 
-## 유저스토리 연결
-
-Event Storming 결과는 다음 단계인 유저스토리 작성의 기반이 됩니다.
-
-### 유저스토리 도출 방법
-
-#### 1. 유저플로우 → Epic
-각 주요 유저플로우가 하나의 Epic이 됩니다.
-
-**예시**:
-- Epic 1: 사용자 인증
-  - Story 1.1: 회원가입
-  - Story 1.2: 로그인
-  - Story 1.3: 비밀번호 재설정
-
-#### 2. 시퀀스 다이어그램 → User Story
-각 시퀀스 다이어그램의 흐름이 하나의 User Story가 됩니다.
-
-**예시**:
-```
-User Story 1.1: 회원가입
-
-As a 신규 사용자,
-I want 이메일로 회원가입하기,
-So that 서비스를 이용할 수 있다.
-
-Acceptance Criteria:
-- Given 회원가입 화면에서
-  When 유효한 이메일, 비밀번호, 이름을 입력하고 가입하기 버튼을 클릭하면
-  Then 회원 정보가 저장되고 환영 이메일이 발송된다
-
-- Given 회원가입 화면에서
-  When 이미 등록된 이메일로 가입을 시도하면
-  Then "이미 등록된 이메일입니다" 오류 메시지가 표시된다
-```
-
-#### 3. Policy/Rule → Acceptance Criteria
-시퀀스 다이어그램의 정책/규칙이 Acceptance Criteria가 됩니다.
-
-#### 4. 이벤트 → 시스템 동작 검증
-각 이벤트는 시스템 동작의 검증 포인트가 됩니다.
+---
 
 ## 도구 활용
-
-### Sequential MCP 사용
-복잡한 시스템 분석과 체계적인 이벤트 도출을 위해 Sequential MCP를 활용하세요.
 
 ### 작성 순서
 1. 핵심 솔루션 분석
 2. 주요 유저플로우 식별 (5-10개)
 3. 유저플로우 간 연결도 작성
-4. 각 유저플로우별 시퀀스 다이어그램 작성
-5. 이벤트, 커맨드, 액터, 정책, 외부시스템 도출
-6. 유저스토리 준비 정보 정리
+4. 각 유저플로우별 시퀀스 다이어그램에 아래 이벤트 스토밍 요소 식별하여 작성
+   - 이벤트 (Events)
+   - 커맨드 (Commands)
+   - 액터 (Actors)
+   - 정책/규칙 (Policies/Rules)
+   - 외부 시스템 (External Systems)
+   - 필요 데이터 (Data)
+
+---
 
 ## 출력 파일
 
@@ -442,22 +230,11 @@ Acceptance Criteria:
 ### PlantUML 작성 규칙
 - **테마**: 항상 `!theme mono` 사용
 - **한국어**: 모든 텍스트를 한국어로 작성
-- **이벤트**: 과거형으로 표현 (예: "회원가입 완료됨", "주문 생성됨")
-- **커맨드**: 명령형으로 표현 (예: "회원가입 요청", "주문 생성")
-- **데이터**: 화살표 라벨에 괄호로 명시 (예: `(이메일, 비밀번호)`)
-- **정책**: `note over` 사용하여 명시
 
 ### Sequential MCP 활용
 - 복잡한 도메인 분석
 - 이벤트와 커맨드 도출
 - 유저플로우 간 의존성 분석
-- 유저스토리 준비 정보 생성
-
-### 유저스토리 에이전트 준비
-- 최소 5개 이상의 핵심 유저플로우 작성
-- 각 시퀀스 다이어그램은 구현 가능한 수준으로 상세하게
-- 이벤트, 커맨드, 정책을 명확히 표시
-- 외부 시스템 연동이 필요한 경우 명시
 
 ### 품질 기준
 - 실제 시스템 아키텍처를 반영
