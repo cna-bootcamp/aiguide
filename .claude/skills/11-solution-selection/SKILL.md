@@ -20,8 +20,6 @@ description: 생성된 아이디어를 평가하고 최적의 솔루션을 선�
 
 - 아이디어 발상 결과 (ideation 결과):
   - `think/솔루션후보.md`
-- 예시 이미지:
-  - `reference/sample-solution-proritization.png`
 
 ---
 
@@ -91,7 +89,6 @@ description: 생성된 아이디어를 평가하고 최적의 솔루션을 선�
 #### 2. SVG 파일로 매트릭스 생성
 
 - **파일명**: `think/솔루션우선순위평가.svg`
-- **참고 예시**: `reference/sample-solution-proritization.png`
 
 #### 3. 핵심 솔루션 선정
 
